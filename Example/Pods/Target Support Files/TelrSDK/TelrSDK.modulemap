@@ -1,0 +1,6 @@
+framework module TelrSDK {
+  umbrella header "TelrSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

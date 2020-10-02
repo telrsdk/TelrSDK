@@ -1,0 +1,772 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		026DEE84B93133E95925E5B22BFA7360 /* TelrSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F932E4AF9FB420F9B8857B4C7B1835E /* TelrSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08A69164FFB21E8E3B7C2491B8FD75AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		1B9CCE2D9C24BBE0CE2184DF37B27968 /* Pods-TelrSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FAEDCA37DB5EF9CF91E7CAA0DE7EF90 /* Pods-TelrSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		338D4FAF3AC1BA9245B4236C56FF1EC0 /* TelrSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB43B242BC9C4B19E5ED2383D0B2BF8 /* TelrSDK-dummy.m */; };
+		49571B5456BA9E5E1F7232B88FAC8B54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		512EAB62DB55F94208946D8B6BF23C09 /* Pods-TelrSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45C054C7E0AA8CC9A369E2EBFE90032F /* Pods-TelrSDK_Tests-dummy.m */; };
+		5EDCF4DE8A2A385EECCD5AA21B467E99 /* Pods-TelrSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D32ECABC94D667BFFE101BCAF77E73 /* Pods-TelrSDK_Example-dummy.m */; };
+		A22D7410A928C7AF55D6926D113DAAD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		A595BD48DF98EA5E76D5A2F3E1733EDA /* Pods-TelrSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC9599571184E0DCD083B4974BB27B7 /* Pods-TelrSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E307E7ADA8A999FEF2618984981DAE34 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FDBADCD35F62BCCF7E1E966AF3386 /* ReplaceMe.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		25C2A55EC3334564D3F966CF6E4E6458 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4683AC0F3463B8B5E48E7D5B02521607;
+			remoteInfo = TelrSDK;
+		};
+		EA7D8D68EC96749D417A5A1919A9C861 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7FE80034D6EC83BCBE9BE5259337DEC9;
+			remoteInfo = "Pods-TelrSDK_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07B9C042CB82FF13672A40768ABD4824 /* Pods-TelrSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TelrSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		09878464FDECAE4E3906551A206486F1 /* Pods_TelrSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TelrSDK_Example.framework; path = "Pods-TelrSDK_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C1769F51A0CA9BACEB68C084D9ED8F3 /* Pods-TelrSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TelrSDK_Tests.modulemap"; sourceTree = "<group>"; };
+		280FDBADCD35F62BCCF7E1E966AF3386 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = TelrSDK/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		2F9088802297066DD89839FB4A539B72 /* TelrSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TelrSDK.framework; path = TelrSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		355E22C2C0852D99284B533E4DBABD58 /* Pods-TelrSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TelrSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		45C054C7E0AA8CC9A369E2EBFE90032F /* Pods-TelrSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TelrSDK_Tests-dummy.m"; sourceTree = "<group>"; };
+		4BC9599571184E0DCD083B4974BB27B7 /* Pods-TelrSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TelrSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
+		5AC86BFF12BB473308B64AE2C690D32E /* Pods-TelrSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TelrSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		5D2EA75E0DEC38837D67C958A20E1472 /* Pods-TelrSDK_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TelrSDK_Tests-Info.plist"; sourceTree = "<group>"; };
+		6CA62BFD0CD65D7F8417F66A654244DC /* Pods-TelrSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TelrSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		87384F75D2DAD91FEADD1CBD6601A884 /* Pods-TelrSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TelrSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		8CD15FC42A6C4C29E4705813BD4D94B8 /* TelrSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TelrSDK.modulemap; sourceTree = "<group>"; };
+		8F932E4AF9FB420F9B8857B4C7B1835E /* TelrSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TelrSDK-umbrella.h"; sourceTree = "<group>"; };
+		8FAEDCA37DB5EF9CF91E7CAA0DE7EF90 /* Pods-TelrSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TelrSDK_Example-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AA9255825C9EBF148671926D8A0C244C /* Pods_TelrSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TelrSDK_Tests.framework; path = "Pods-TelrSDK_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEE39E32307E994EA002060B3BB912FC /* Pods-TelrSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TelrSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		C0F99A215AF4DA1095CF80FF2CFC9225 /* Pods-TelrSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TelrSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
+		C68CD8790EA69F798230778DC3FDDA7B /* TelrSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TelrSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CAABA81F51D4765BDB9EA05F895B7820 /* TelrSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TelrSDK-prefix.pch"; sourceTree = "<group>"; };
+		D4941DCE349E6809E346A2C211C6EFCC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		D50D0A871EB6339C52CC763FA11C7A6A /* Pods-TelrSDK_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TelrSDK_Example-Info.plist"; sourceTree = "<group>"; };
+		D6FB570C6C4AF04CAAF5D64A22FCD4B7 /* Pods-TelrSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TelrSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		DF7B954F584E62F556B262B080DEEB2A /* TelrSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TelrSDK.debug.xcconfig; sourceTree = "<group>"; };
+		E21DD4C618247F94820380E6B4FCC451 /* TelrSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TelrSDK.release.xcconfig; sourceTree = "<group>"; };
+		E358E7FBAB03A875A68371FCA9BD5005 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		E3D32ECABC94D667BFFE101BCAF77E73 /* Pods-TelrSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TelrSDK_Example-dummy.m"; sourceTree = "<group>"; };
+		EEB43B242BC9C4B19E5ED2383D0B2BF8 /* TelrSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TelrSDK-dummy.m"; sourceTree = "<group>"; };
+		F300A9CE5A9167C164A5962A608C9B18 /* Pods-TelrSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TelrSDK_Example.modulemap"; sourceTree = "<group>"; };
+		FA10F8E92D23425C0656B52EE1FCE75A /* TelrSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TelrSDK-Info.plist"; sourceTree = "<group>"; };
+		FE90B58FDD9A0C41A0560FAEED86C73D /* Pods-TelrSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TelrSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4DC5FB56E6386E1269954F769F22426E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A22D7410A928C7AF55D6926D113DAAD3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A898F9740F375D81DB17B988816A3C8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49571B5456BA9E5E1F7232B88FAC8B54 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C187808DB4E62E910627305A4210BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08A69164FFB21E8E3B7C2491B8FD75AF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C4DEB4B53BD91144CE1C9B9E9F66887 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ADC806A2C1301B484DC18F2E64C24F06 /* TelrSDK */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		10FB9F7C7FC0FDF810EB801FFF68603C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1C794683CAA06DD27370DC1323EFAC99 /* Pods-TelrSDK_Example */,
+				F8FC6F4E9D7C097D60E9C58D5822C171 /* Pods-TelrSDK_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		1C794683CAA06DD27370DC1323EFAC99 /* Pods-TelrSDK_Example */ = {
+			isa = PBXGroup;
+			children = (
+				F300A9CE5A9167C164A5962A608C9B18 /* Pods-TelrSDK_Example.modulemap */,
+				355E22C2C0852D99284B533E4DBABD58 /* Pods-TelrSDK_Example-acknowledgements.markdown */,
+				AEE39E32307E994EA002060B3BB912FC /* Pods-TelrSDK_Example-acknowledgements.plist */,
+				E3D32ECABC94D667BFFE101BCAF77E73 /* Pods-TelrSDK_Example-dummy.m */,
+				C0F99A215AF4DA1095CF80FF2CFC9225 /* Pods-TelrSDK_Example-frameworks.sh */,
+				D50D0A871EB6339C52CC763FA11C7A6A /* Pods-TelrSDK_Example-Info.plist */,
+				8FAEDCA37DB5EF9CF91E7CAA0DE7EF90 /* Pods-TelrSDK_Example-umbrella.h */,
+				87384F75D2DAD91FEADD1CBD6601A884 /* Pods-TelrSDK_Example.debug.xcconfig */,
+				FE90B58FDD9A0C41A0560FAEED86C73D /* Pods-TelrSDK_Example.release.xcconfig */,
+			);
+			name = "Pods-TelrSDK_Example";
+			path = "Target Support Files/Pods-TelrSDK_Example";
+			sourceTree = "<group>";
+		};
+		587C7CFE761EFD1077D36040EAAC1EBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09878464FDECAE4E3906551A206486F1 /* Pods_TelrSDK_Example.framework */,
+				AA9255825C9EBF148671926D8A0C244C /* Pods_TelrSDK_Tests.framework */,
+				2F9088802297066DD89839FB4A539B72 /* TelrSDK.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87C3B07CF1B254D11917F8E0F8D007C1 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				E358E7FBAB03A875A68371FCA9BD5005 /* LICENSE */,
+				D4941DCE349E6809E346A2C211C6EFCC /* README.md */,
+				C68CD8790EA69F798230778DC3FDDA7B /* TelrSDK.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		89CB0005F61CC6AEBFD40D7578ABAEC7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8CD15FC42A6C4C29E4705813BD4D94B8 /* TelrSDK.modulemap */,
+				EEB43B242BC9C4B19E5ED2383D0B2BF8 /* TelrSDK-dummy.m */,
+				FA10F8E92D23425C0656B52EE1FCE75A /* TelrSDK-Info.plist */,
+				CAABA81F51D4765BDB9EA05F895B7820 /* TelrSDK-prefix.pch */,
+				8F932E4AF9FB420F9B8857B4C7B1835E /* TelrSDK-umbrella.h */,
+				DF7B954F584E62F556B262B080DEEB2A /* TelrSDK.debug.xcconfig */,
+				E21DD4C618247F94820380E6B4FCC451 /* TelrSDK.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/TelrSDK";
+			sourceTree = "<group>";
+		};
+		ADC806A2C1301B484DC18F2E64C24F06 /* TelrSDK */ = {
+			isa = PBXGroup;
+			children = (
+				280FDBADCD35F62BCCF7E1E966AF3386 /* ReplaceMe.swift */,
+				87C3B07CF1B254D11917F8E0F8D007C1 /* Pod */,
+				89CB0005F61CC6AEBFD40D7578ABAEC7 /* Support Files */,
+			);
+			name = TelrSDK;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				0C4DEB4B53BD91144CE1C9B9E9F66887 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				587C7CFE761EFD1077D36040EAAC1EBD /* Products */,
+				10FB9F7C7FC0FDF810EB801FFF68603C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8FC6F4E9D7C097D60E9C58D5822C171 /* Pods-TelrSDK_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1C1769F51A0CA9BACEB68C084D9ED8F3 /* Pods-TelrSDK_Tests.modulemap */,
+				07B9C042CB82FF13672A40768ABD4824 /* Pods-TelrSDK_Tests-acknowledgements.markdown */,
+				6CA62BFD0CD65D7F8417F66A654244DC /* Pods-TelrSDK_Tests-acknowledgements.plist */,
+				45C054C7E0AA8CC9A369E2EBFE90032F /* Pods-TelrSDK_Tests-dummy.m */,
+				5D2EA75E0DEC38837D67C958A20E1472 /* Pods-TelrSDK_Tests-Info.plist */,
+				4BC9599571184E0DCD083B4974BB27B7 /* Pods-TelrSDK_Tests-umbrella.h */,
+				D6FB570C6C4AF04CAAF5D64A22FCD4B7 /* Pods-TelrSDK_Tests.debug.xcconfig */,
+				5AC86BFF12BB473308B64AE2C690D32E /* Pods-TelrSDK_Tests.release.xcconfig */,
+			);
+			name = "Pods-TelrSDK_Tests";
+			path = "Target Support Files/Pods-TelrSDK_Tests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		74650CCB0555B614220D184EAC47DFD3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				026DEE84B93133E95925E5B22BFA7360 /* TelrSDK-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FA2053DEF23819762FF2DA1A177CC7B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B9CCE2D9C24BBE0CE2184DF37B27968 /* Pods-TelrSDK_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA826CCF02429974BD78C25AC64FFC70 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A595BD48DF98EA5E76D5A2F3E1733EDA /* Pods-TelrSDK_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4683AC0F3463B8B5E48E7D5B02521607 /* TelrSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 555361135F0FF51301C097C19AE9DE63 /* Build configuration list for PBXNativeTarget "TelrSDK" */;
+			buildPhases = (
+				74650CCB0555B614220D184EAC47DFD3 /* Headers */,
+				7BCC43EFE4299A6A31D590F4F8F1C799 /* Sources */,
+				A898F9740F375D81DB17B988816A3C8C /* Frameworks */,
+				2FD1B335DA258B8A5BBF8C5B5A7B1021 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TelrSDK;
+			productName = TelrSDK;
+			productReference = 2F9088802297066DD89839FB4A539B72 /* TelrSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7FE80034D6EC83BCBE9BE5259337DEC9 /* Pods-TelrSDK_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFCF115C98C24CC21F2E9247D8E8895F /* Build configuration list for PBXNativeTarget "Pods-TelrSDK_Example" */;
+			buildPhases = (
+				7FA2053DEF23819762FF2DA1A177CC7B /* Headers */,
+				A560EE2A97E7D148ED7112FBB20D73B4 /* Sources */,
+				4DC5FB56E6386E1269954F769F22426E /* Frameworks */,
+				ED367DA75C8D5882D62B43C8799EF878 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B65C816FBB772165E76BA3B4006DC59E /* PBXTargetDependency */,
+			);
+			name = "Pods-TelrSDK_Example";
+			productName = "Pods-TelrSDK_Example";
+			productReference = 09878464FDECAE4E3906551A206486F1 /* Pods_TelrSDK_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FF1A16F812E8173343C036FA20309D0A /* Pods-TelrSDK_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E183A7B406B444BEAF58618FCC2A53DD /* Build configuration list for PBXNativeTarget "Pods-TelrSDK_Tests" */;
+			buildPhases = (
+				CA826CCF02429974BD78C25AC64FFC70 /* Headers */,
+				67696014E71177F236D34BFB01FF152F /* Sources */,
+				B8C187808DB4E62E910627305A4210BE /* Frameworks */,
+				58FC0A2F734564A0E4BEAA7FDDBCD1D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05371D9741674C8625B5D6051CDEBB51 /* PBXTargetDependency */,
+			);
+			name = "Pods-TelrSDK_Tests";
+			productName = "Pods-TelrSDK_Tests";
+			productReference = AA9255825C9EBF148671926D8A0C244C /* Pods_TelrSDK_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 587C7CFE761EFD1077D36040EAAC1EBD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7FE80034D6EC83BCBE9BE5259337DEC9 /* Pods-TelrSDK_Example */,
+				FF1A16F812E8173343C036FA20309D0A /* Pods-TelrSDK_Tests */,
+				4683AC0F3463B8B5E48E7D5B02521607 /* TelrSDK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2FD1B335DA258B8A5BBF8C5B5A7B1021 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58FC0A2F734564A0E4BEAA7FDDBCD1D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED367DA75C8D5882D62B43C8799EF878 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67696014E71177F236D34BFB01FF152F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				512EAB62DB55F94208946D8B6BF23C09 /* Pods-TelrSDK_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BCC43EFE4299A6A31D590F4F8F1C799 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E307E7ADA8A999FEF2618984981DAE34 /* ReplaceMe.swift in Sources */,
+				338D4FAF3AC1BA9245B4236C56FF1EC0 /* TelrSDK-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A560EE2A97E7D148ED7112FBB20D73B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EDCF4DE8A2A385EECCD5AA21B467E99 /* Pods-TelrSDK_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05371D9741674C8625B5D6051CDEBB51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TelrSDK_Example";
+			target = 7FE80034D6EC83BCBE9BE5259337DEC9 /* Pods-TelrSDK_Example */;
+			targetProxy = EA7D8D68EC96749D417A5A1919A9C861 /* PBXContainerItemProxy */;
+		};
+		B65C816FBB772165E76BA3B4006DC59E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TelrSDK;
+			target = 4683AC0F3463B8B5E48E7D5B02521607 /* TelrSDK */;
+			targetProxy = 25C2A55EC3334564D3F966CF6E4E6458 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		336A6468C88905B8803171041E4F0F63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AC86BFF12BB473308B64AE2C690D32E /* Pods-TelrSDK_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TelrSDK_Tests/Pods-TelrSDK_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TelrSDK_Tests/Pods-TelrSDK_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3CC18460E0735715B65521EC44EA0DF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87384F75D2DAD91FEADD1CBD6601A884 /* Pods-TelrSDK_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TelrSDK_Example/Pods-TelrSDK_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TelrSDK_Example/Pods-TelrSDK_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		74999020F67A0720A5DA76A685B2427C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE90B58FDD9A0C41A0560FAEED86C73D /* Pods-TelrSDK_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TelrSDK_Example/Pods-TelrSDK_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TelrSDK_Example/Pods-TelrSDK_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		796AD6DB8DF1F152407B9257FE1B69EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E21DD4C618247F94820380E6B4FCC451 /* TelrSDK.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TelrSDK/TelrSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TelrSDK/TelrSDK-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TelrSDK/TelrSDK.modulemap";
+				PRODUCT_MODULE_NAME = TelrSDK;
+				PRODUCT_NAME = TelrSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		80B8E668F5835D745B22A8DF3F233495 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF7B954F584E62F556B262B080DEEB2A /* TelrSDK.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TelrSDK/TelrSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TelrSDK/TelrSDK-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TelrSDK/TelrSDK.modulemap";
+				PRODUCT_MODULE_NAME = TelrSDK;
+				PRODUCT_NAME = TelrSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9857A12CF9899B3B85E81659D55FAE9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6FB570C6C4AF04CAAF5D64A22FCD4B7 /* Pods-TelrSDK_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TelrSDK_Tests/Pods-TelrSDK_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TelrSDK_Tests/Pods-TelrSDK_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B0087CB4594321EF41619F3181FE120E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */,
+				B0087CB4594321EF41619F3181FE120E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		555361135F0FF51301C097C19AE9DE63 /* Build configuration list for PBXNativeTarget "TelrSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80B8E668F5835D745B22A8DF3F233495 /* Debug */,
+				796AD6DB8DF1F152407B9257FE1B69EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFCF115C98C24CC21F2E9247D8E8895F /* Build configuration list for PBXNativeTarget "Pods-TelrSDK_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CC18460E0735715B65521EC44EA0DF5 /* Debug */,
+				74999020F67A0720A5DA76A685B2427C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E183A7B406B444BEAF58618FCC2A53DD /* Build configuration list for PBXNativeTarget "Pods-TelrSDK_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9857A12CF9899B3B85E81659D55FAE9B /* Debug */,
+				336A6468C88905B8803171041E4F0F63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

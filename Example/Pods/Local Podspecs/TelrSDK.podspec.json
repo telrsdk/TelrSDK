@@ -1,0 +1,22 @@
+{
+  "name": "TelrSDK",
+  "version": "0.1.0",
+  "summary": "A short description of TelrSDK.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Telr Sdk/TelrSDK",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Telr Sdk": "telrsdk@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Telr Sdk/TelrSDK.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "TelrSDK/Classes/**/*"
+}

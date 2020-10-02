@@ -1,0 +1,16 @@
+PODS:
+  - TelrSDK (0.1.0)
+
+DEPENDENCIES:
+  - TelrSDK (from `../`)
+
+EXTERNAL SOURCES:
+  TelrSDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TelrSDK: 52cabf0e9080d875e0a6f8afb4fa083e99e78ba8
+
+PODFILE CHECKSUM: 88e1c8cc288b79e86b02abf56698a031b09a1814
+
+COCOAPODS: 1.9.3
