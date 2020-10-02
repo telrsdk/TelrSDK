@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'TelrSDK'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of TelrSDK.'
+  s.summary          = 'We’re an award-winning payment aggregator+ provider.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,8 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  
+  'We’re an award-winning payment aggregator+ provider. We really like startups and SMEs, and we design to their needs Our mission is to build connections that remove fragmentation in the e-commerce ecosystem. We make these connections to enable our customers to go cashless, digitising the way that they accept payments.'
                        DESC
 
   s.homepage         = 'https://github.com/Telr Sdk/TelrSDK'
@@ -28,9 +29,15 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/Telr Sdk/TelrSDK.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
-  s.source_files = 'TelrSDK/Classes/**/*'
+  s.swift_version = '5.0'
+  
+  s.platforms = {
+      "ios": "11.0"
+  }
+  
+  s.source_files = 'Source/**/*.swift'
   
   # s.resource_bundles = {
   #   'TelrSDK' => ['TelrSDK/Assets/*.png']

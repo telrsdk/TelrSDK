@@ -14,9 +14,16 @@
 		49571B5456BA9E5E1F7232B88FAC8B54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		512EAB62DB55F94208946D8B6BF23C09 /* Pods-TelrSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45C054C7E0AA8CC9A369E2EBFE90032F /* Pods-TelrSDK_Tests-dummy.m */; };
 		5EDCF4DE8A2A385EECCD5AA21B467E99 /* Pods-TelrSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D32ECABC94D667BFFE101BCAF77E73 /* Pods-TelrSDK_Example-dummy.m */; };
+		84B5460D2527DD6300405DD6 /* PaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B546092527DD6300405DD6 /* PaymentRequest.swift */; };
+		84B5460E2527DD6300405DD6 /* PaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B546092527DD6300405DD6 /* PaymentRequest.swift */; };
+		84B5460F2527DD6300405DD6 /* TelrResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5460A2527DD6300405DD6 /* TelrResponseModel.swift */; };
+		84B546102527DD6300405DD6 /* TelrResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5460A2527DD6300405DD6 /* TelrResponseModel.swift */; };
+		84B546112527DD6300405DD6 /* TelrController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5460B2527DD6300405DD6 /* TelrController.swift */; };
+		84B546122527DD6300405DD6 /* TelrController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5460B2527DD6300405DD6 /* TelrController.swift */; };
+		84B546132527DD6300405DD6 /* XML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5460C2527DD6300405DD6 /* XML.swift */; };
+		84B546142527DD6300405DD6 /* XML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5460C2527DD6300405DD6 /* XML.swift */; };
 		A22D7410A928C7AF55D6926D113DAAD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		A595BD48DF98EA5E76D5A2F3E1733EDA /* Pods-TelrSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC9599571184E0DCD083B4974BB27B7 /* Pods-TelrSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E307E7ADA8A999FEF2618984981DAE34 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FDBADCD35F62BCCF7E1E966AF3386 /* ReplaceMe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +45,9 @@
 
 /* Begin PBXFileReference section */
 		07B9C042CB82FF13672A40768ABD4824 /* Pods-TelrSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TelrSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		09878464FDECAE4E3906551A206486F1 /* Pods_TelrSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TelrSDK_Example.framework; path = "Pods-TelrSDK_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09878464FDECAE4E3906551A206486F1 /* Pods_TelrSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TelrSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C1769F51A0CA9BACEB68C084D9ED8F3 /* Pods-TelrSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TelrSDK_Tests.modulemap"; sourceTree = "<group>"; };
-		280FDBADCD35F62BCCF7E1E966AF3386 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = TelrSDK/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
-		2F9088802297066DD89839FB4A539B72 /* TelrSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TelrSDK.framework; path = TelrSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F9088802297066DD89839FB4A539B72 /* TelrSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TelrSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		355E22C2C0852D99284B533E4DBABD58 /* Pods-TelrSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TelrSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		45C054C7E0AA8CC9A369E2EBFE90032F /* Pods-TelrSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TelrSDK_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -49,22 +55,26 @@
 		5AC86BFF12BB473308B64AE2C690D32E /* Pods-TelrSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TelrSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5D2EA75E0DEC38837D67C958A20E1472 /* Pods-TelrSDK_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TelrSDK_Tests-Info.plist"; sourceTree = "<group>"; };
 		6CA62BFD0CD65D7F8417F66A654244DC /* Pods-TelrSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TelrSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		84B546092527DD6300405DD6 /* PaymentRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentRequest.swift; sourceTree = "<group>"; };
+		84B5460A2527DD6300405DD6 /* TelrResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelrResponseModel.swift; sourceTree = "<group>"; };
+		84B5460B2527DD6300405DD6 /* TelrController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelrController.swift; sourceTree = "<group>"; };
+		84B5460C2527DD6300405DD6 /* XML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XML.swift; sourceTree = "<group>"; };
 		87384F75D2DAD91FEADD1CBD6601A884 /* Pods-TelrSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TelrSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8CD15FC42A6C4C29E4705813BD4D94B8 /* TelrSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TelrSDK.modulemap; sourceTree = "<group>"; };
 		8F932E4AF9FB420F9B8857B4C7B1835E /* TelrSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TelrSDK-umbrella.h"; sourceTree = "<group>"; };
 		8FAEDCA37DB5EF9CF91E7CAA0DE7EF90 /* Pods-TelrSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TelrSDK_Example-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AA9255825C9EBF148671926D8A0C244C /* Pods_TelrSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TelrSDK_Tests.framework; path = "Pods-TelrSDK_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AA9255825C9EBF148671926D8A0C244C /* Pods_TelrSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TelrSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE39E32307E994EA002060B3BB912FC /* Pods-TelrSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TelrSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		C0F99A215AF4DA1095CF80FF2CFC9225 /* Pods-TelrSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TelrSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
-		C68CD8790EA69F798230778DC3FDDA7B /* TelrSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TelrSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C68CD8790EA69F798230778DC3FDDA7B /* TelrSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TelrSDK.podspec; sourceTree = "<group>"; tabWidth = 2; };
 		CAABA81F51D4765BDB9EA05F895B7820 /* TelrSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TelrSDK-prefix.pch"; sourceTree = "<group>"; };
-		D4941DCE349E6809E346A2C211C6EFCC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		D4941DCE349E6809E346A2C211C6EFCC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D50D0A871EB6339C52CC763FA11C7A6A /* Pods-TelrSDK_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TelrSDK_Example-Info.plist"; sourceTree = "<group>"; };
 		D6FB570C6C4AF04CAAF5D64A22FCD4B7 /* Pods-TelrSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TelrSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF7B954F584E62F556B262B080DEEB2A /* TelrSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TelrSDK.debug.xcconfig; sourceTree = "<group>"; };
 		E21DD4C618247F94820380E6B4FCC451 /* TelrSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TelrSDK.release.xcconfig; sourceTree = "<group>"; };
-		E358E7FBAB03A875A68371FCA9BD5005 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		E358E7FBAB03A875A68371FCA9BD5005 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E3D32ECABC94D667BFFE101BCAF77E73 /* Pods-TelrSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TelrSDK_Example-dummy.m"; sourceTree = "<group>"; };
 		EEB43B242BC9C4B19E5ED2383D0B2BF8 /* TelrSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TelrSDK-dummy.m"; sourceTree = "<group>"; };
 		F300A9CE5A9167C164A5962A608C9B18 /* Pods-TelrSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TelrSDK_Example.modulemap"; sourceTree = "<group>"; };
@@ -144,6 +154,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		84B545DC25277DB900405DD6 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				84B546092527DD6300405DD6 /* PaymentRequest.swift */,
+				84B5460B2527DD6300405DD6 /* TelrController.swift */,
+				84B5460A2527DD6300405DD6 /* TelrResponseModel.swift */,
+				84B5460C2527DD6300405DD6 /* XML.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		87C3B07CF1B254D11917F8E0F8D007C1 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,7 +193,7 @@
 		ADC806A2C1301B484DC18F2E64C24F06 /* TelrSDK */ = {
 			isa = PBXGroup;
 			children = (
-				280FDBADCD35F62BCCF7E1E966AF3386 /* ReplaceMe.swift */,
+				84B545DC25277DB900405DD6 /* Source */,
 				87C3B07CF1B254D11917F8E0F8D007C1 /* Pod */,
 				89CB0005F61CC6AEBFD40D7578ABAEC7 /* Support Files */,
 			);
@@ -316,7 +337,15 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					4683AC0F3463B8B5E48E7D5B02521607 = {
+						LastSwiftMigration = 1200;
+					};
+					7FE80034D6EC83BCBE9BE5259337DEC9 = {
+						LastSwiftMigration = 1200;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -375,7 +404,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E307E7ADA8A999FEF2618984981DAE34 /* ReplaceMe.swift in Sources */,
+				84B546142527DD6300405DD6 /* XML.swift in Sources */,
+				84B5460E2527DD6300405DD6 /* PaymentRequest.swift in Sources */,
+				84B546102527DD6300405DD6 /* TelrResponseModel.swift in Sources */,
+				84B546122527DD6300405DD6 /* TelrController.swift in Sources */,
 				338D4FAF3AC1BA9245B4236C56FF1EC0 /* TelrSDK-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +416,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B546132527DD6300405DD6 /* XML.swift in Sources */,
+				84B5460D2527DD6300405DD6 /* PaymentRequest.swift in Sources */,
+				84B5460F2527DD6300405DD6 /* TelrResponseModel.swift in Sources */,
+				84B546112527DD6300405DD6 /* TelrController.swift in Sources */,
 				5EDCF4DE8A2A385EECCD5AA21B467E99 /* Pods-TelrSDK_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,7 +458,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-TelrSDK_Tests/Pods-TelrSDK_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TelrSDK_Tests/Pods-TelrSDK_Tests.modulemap";
@@ -445,6 +481,7 @@
 			baseConfigurationReference = 87384F75D2DAD91FEADD1CBD6601A884 /* Pods-TelrSDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -456,7 +493,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-TelrSDK_Example/Pods-TelrSDK_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TelrSDK_Example/Pods-TelrSDK_Example.modulemap";
@@ -467,6 +504,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -478,6 +517,7 @@
 			baseConfigurationReference = FE90B58FDD9A0C41A0560FAEED86C73D /* Pods-TelrSDK_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -489,7 +529,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-TelrSDK_Example/Pods-TelrSDK_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TelrSDK_Example/Pods-TelrSDK_Example.modulemap";
@@ -500,6 +540,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -511,6 +552,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E21DD4C618247F94820380E6B4FCC451 /* TelrSDK.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -523,7 +565,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/TelrSDK/TelrSDK-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/TelrSDK/TelrSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/TelrSDK/TelrSDK.modulemap";
 				PRODUCT_MODULE_NAME = TelrSDK;
@@ -531,7 +573,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -543,6 +585,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF7B954F584E62F556B262B080DEEB2A /* TelrSDK.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -555,7 +598,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/TelrSDK/TelrSDK-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/TelrSDK/TelrSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/TelrSDK/TelrSDK.modulemap";
 				PRODUCT_MODULE_NAME = TelrSDK;
@@ -563,7 +606,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -586,7 +630,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-TelrSDK_Tests/Pods-TelrSDK_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TelrSDK_Tests/Pods-TelrSDK_Tests.modulemap";
@@ -629,6 +673,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -651,13 +696,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -689,6 +733,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -714,7 +759,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
