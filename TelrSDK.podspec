@@ -22,11 +22,11 @@ Pod::Spec.new do |s|
   'We’re an award-winning payment aggregator+ provider. We really like startups and SMEs, and we design to their needs Our mission is to build connections that remove fragmentation in the e-commerce ecosystem. We make these connections to enable our customers to go cashless, digitising the way that they accept payments.'
                        DESC
 
-  s.homepage         = 'https://github.com/Telr Sdk/TelrSDK'
+  s.homepage         = 'https://github.com/telrsdk/TelrSDK'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Telr Sdk' => 'telrsdk@gmail.com' }
-  s.source           = { :git => 'https://github.com/Telr Sdk/TelrSDK.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/telrsdk/TelrSDK.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
