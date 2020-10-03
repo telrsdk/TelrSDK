@@ -1,3 +1,8 @@
+<p align="center">
+<img
+src="https://github.com/telrsdk/TelrSDK/blob/master/Example/TelrSDK/Images.xcassets/logo.imageset/Telr-logo-green-rgb-2000w.png width=200"/>
+</p>
+
 # TelrSDK
 
 [![CI Status](https://img.shields.io/travis/Telr Sdk/TelrSDK.svg?style=flat)](https://travis-ci.org/Telr Sdk/TelrSDK)
