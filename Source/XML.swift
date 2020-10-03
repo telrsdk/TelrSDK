@@ -1,4 +1,3 @@
-
 //
 //  XML.swift
 //  TelrSDK
@@ -6,7 +5,6 @@
 //  Created by Telr Sdk on 10/02/2020.
 //  Copyright (c) 2020 Telr Sdk. All rights reserved.
 //
-
 import Foundation
 
 public protocol XMLSubscriptType {}

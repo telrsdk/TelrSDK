@@ -14,14 +14,14 @@
 		49571B5456BA9E5E1F7232B88FAC8B54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		512EAB62DB55F94208946D8B6BF23C09 /* Pods-TelrSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45C054C7E0AA8CC9A369E2EBFE90032F /* Pods-TelrSDK_Tests-dummy.m */; };
 		5EDCF4DE8A2A385EECCD5AA21B467E99 /* Pods-TelrSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D32ECABC94D667BFFE101BCAF77E73 /* Pods-TelrSDK_Example-dummy.m */; };
-		84B5460D2527DD6300405DD6 /* PaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B546092527DD6300405DD6 /* PaymentRequest.swift */; };
-		84B5460E2527DD6300405DD6 /* PaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B546092527DD6300405DD6 /* PaymentRequest.swift */; };
-		84B5460F2527DD6300405DD6 /* TelrResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5460A2527DD6300405DD6 /* TelrResponseModel.swift */; };
-		84B546102527DD6300405DD6 /* TelrResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5460A2527DD6300405DD6 /* TelrResponseModel.swift */; };
-		84B546112527DD6300405DD6 /* TelrController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5460B2527DD6300405DD6 /* TelrController.swift */; };
-		84B546122527DD6300405DD6 /* TelrController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5460B2527DD6300405DD6 /* TelrController.swift */; };
-		84B546132527DD6300405DD6 /* XML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5460C2527DD6300405DD6 /* XML.swift */; };
-		84B546142527DD6300405DD6 /* XML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5460C2527DD6300405DD6 /* XML.swift */; };
+		84B546502527F6FE00405DD6 /* PaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5464C2527F6FE00405DD6 /* PaymentRequest.swift */; };
+		84B546512527F6FE00405DD6 /* PaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5464C2527F6FE00405DD6 /* PaymentRequest.swift */; };
+		84B546522527F6FE00405DD6 /* XML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5464D2527F6FE00405DD6 /* XML.swift */; };
+		84B546532527F6FE00405DD6 /* XML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5464D2527F6FE00405DD6 /* XML.swift */; };
+		84B546542527F6FE00405DD6 /* TelrResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5464E2527F6FE00405DD6 /* TelrResponseModel.swift */; };
+		84B546552527F6FE00405DD6 /* TelrResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5464E2527F6FE00405DD6 /* TelrResponseModel.swift */; };
+		84B546562527F6FE00405DD6 /* TelrController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5464F2527F6FE00405DD6 /* TelrController.swift */; };
+		84B546572527F6FE00405DD6 /* TelrController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5464F2527F6FE00405DD6 /* TelrController.swift */; };
 		A22D7410A928C7AF55D6926D113DAAD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		A595BD48DF98EA5E76D5A2F3E1733EDA /* Pods-TelrSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC9599571184E0DCD083B4974BB27B7 /* Pods-TelrSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -55,10 +55,10 @@
 		5AC86BFF12BB473308B64AE2C690D32E /* Pods-TelrSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TelrSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5D2EA75E0DEC38837D67C958A20E1472 /* Pods-TelrSDK_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TelrSDK_Tests-Info.plist"; sourceTree = "<group>"; };
 		6CA62BFD0CD65D7F8417F66A654244DC /* Pods-TelrSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TelrSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		84B546092527DD6300405DD6 /* PaymentRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentRequest.swift; sourceTree = "<group>"; };
-		84B5460A2527DD6300405DD6 /* TelrResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelrResponseModel.swift; sourceTree = "<group>"; };
-		84B5460B2527DD6300405DD6 /* TelrController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelrController.swift; sourceTree = "<group>"; };
-		84B5460C2527DD6300405DD6 /* XML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XML.swift; sourceTree = "<group>"; };
+		84B5464C2527F6FE00405DD6 /* PaymentRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentRequest.swift; sourceTree = "<group>"; };
+		84B5464D2527F6FE00405DD6 /* XML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XML.swift; sourceTree = "<group>"; };
+		84B5464E2527F6FE00405DD6 /* TelrResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelrResponseModel.swift; sourceTree = "<group>"; };
+		84B5464F2527F6FE00405DD6 /* TelrController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelrController.swift; sourceTree = "<group>"; };
 		87384F75D2DAD91FEADD1CBD6601A884 /* Pods-TelrSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TelrSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8CD15FC42A6C4C29E4705813BD4D94B8 /* TelrSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TelrSDK.modulemap; sourceTree = "<group>"; };
 		8F932E4AF9FB420F9B8857B4C7B1835E /* TelrSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TelrSDK-umbrella.h"; sourceTree = "<group>"; };
@@ -154,13 +154,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		84B545DC25277DB900405DD6 /* Source */ = {
+		84B5462B2527F5FE00405DD6 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				84B546092527DD6300405DD6 /* PaymentRequest.swift */,
-				84B5460B2527DD6300405DD6 /* TelrController.swift */,
-				84B5460A2527DD6300405DD6 /* TelrResponseModel.swift */,
-				84B5460C2527DD6300405DD6 /* XML.swift */,
+				84B5464C2527F6FE00405DD6 /* PaymentRequest.swift */,
+				84B5464F2527F6FE00405DD6 /* TelrController.swift */,
+				84B5464E2527F6FE00405DD6 /* TelrResponseModel.swift */,
+				84B5464D2527F6FE00405DD6 /* XML.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -193,7 +193,7 @@
 		ADC806A2C1301B484DC18F2E64C24F06 /* TelrSDK */ = {
 			isa = PBXGroup;
 			children = (
-				84B545DC25277DB900405DD6 /* Source */,
+				84B5462B2527F5FE00405DD6 /* Source */,
 				87C3B07CF1B254D11917F8E0F8D007C1 /* Pod */,
 				89CB0005F61CC6AEBFD40D7578ABAEC7 /* Support Files */,
 			);
@@ -404,11 +404,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84B546142527DD6300405DD6 /* XML.swift in Sources */,
-				84B5460E2527DD6300405DD6 /* PaymentRequest.swift in Sources */,
-				84B546102527DD6300405DD6 /* TelrResponseModel.swift in Sources */,
-				84B546122527DD6300405DD6 /* TelrController.swift in Sources */,
+				84B546512527F6FE00405DD6 /* PaymentRequest.swift in Sources */,
+				84B546552527F6FE00405DD6 /* TelrResponseModel.swift in Sources */,
+				84B546532527F6FE00405DD6 /* XML.swift in Sources */,
 				338D4FAF3AC1BA9245B4236C56FF1EC0 /* TelrSDK-dummy.m in Sources */,
+				84B546572527F6FE00405DD6 /* TelrController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,11 +416,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84B546132527DD6300405DD6 /* XML.swift in Sources */,
-				84B5460D2527DD6300405DD6 /* PaymentRequest.swift in Sources */,
-				84B5460F2527DD6300405DD6 /* TelrResponseModel.swift in Sources */,
-				84B546112527DD6300405DD6 /* TelrController.swift in Sources */,
+				84B546502527F6FE00405DD6 /* PaymentRequest.swift in Sources */,
+				84B546542527F6FE00405DD6 /* TelrResponseModel.swift in Sources */,
+				84B546522527F6FE00405DD6 /* XML.swift in Sources */,
 				5EDCF4DE8A2A385EECCD5AA21B467E99 /* Pods-TelrSDK_Example-dummy.m in Sources */,
+				84B546562527F6FE00405DD6 /* TelrController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
