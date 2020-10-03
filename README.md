@@ -5,7 +5,6 @@ src='https://github.com/telrsdk/TelrSDK/blob/master/Example/TelrSDK/Images.xcass
 
 # TelrSDK
 
-[![CI Status](https://img.shields.io/travis/Telr Sdk/TelrSDK.svg?style=flat)](https://travis-ci.org/Telr Sdk/TelrSDK)
 [![Version](https://img.shields.io/cocoapods/v/TelrSDK.svg?style=flat)](https://cocoapods.org/pods/TelrSDK)
 [![License](https://img.shields.io/cocoapods/l/TelrSDK.svg?style=flat)](https://cocoapods.org/pods/TelrSDK)
 [![Platform](https://img.shields.io/cocoapods/p/TelrSDK.svg?style=flat)](https://cocoapods.org/pods/TelrSDK)
