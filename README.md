@@ -252,7 +252,7 @@ extension ViewController{
      
         paymentReq.transClass = lastresponse.transClass ?? ""
      
-         paymentReq.transCartid = String(arc4random())
+        paymentReq.transCartid = String(arc4random())
      
         paymentReq.transDesc = lastresponse.transDesc ?? ""
      
@@ -266,21 +266,21 @@ extension ViewController{
      
         paymentReq.city = lastresponse.city ?? ""
      
-         paymentReq.country = lastresponse.country ?? ""
+        paymentReq.country = lastresponse.country ?? ""
      
-         paymentReq.region = lastresponse.region ?? ""
+        paymentReq.region = lastresponse.region ?? ""
      
-         paymentReq.address = lastresponse.address ?? ""
+        paymentReq.address = lastresponse.address ?? ""
      
-         paymentReq.transAmount = amountTxt.text!
+        paymentReq.transAmount = amountTxt.text!
      
-         paymentReq.transFirstRef = lastresponse.transFirstRef ?? ""
+        paymentReq.transFirstRef = lastresponse.transFirstRef ?? ""
      
-         paymentReq.billingEmail = lastresponse.billingEmail ?? ""
+        paymentReq.billingEmail = lastresponse.billingEmail ?? ""
      
-         paymentReq.language = "ar"
+        paymentReq.language = "ar"
      
-         return paymentReq
+        return paymentReq
 
      }
 }
