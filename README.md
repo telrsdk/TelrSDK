@@ -53,6 +53,16 @@ Make sure you import the sdk where you want use it using below code
 ```ruby
 import TelrSDK
 ```
+Use this to set the details of store. make sure you are using your stoe details
+
+```ruby
+let KEY:String = "BwxtF~dq9L#xgWZb" // TODO fill key
+let STOREID:String = "21941"  // TODO fill store id
+let EMAIL:String = "girish.spryox@gmail.com" // TODO fill email id
+
+```
+
+
 
 ## For Call the payment page we use two methoads
 
@@ -78,6 +88,22 @@ telrController.delegate = self
 telrController.paymentRequest = paymentRequest!
 let nav = UINavigationController(rootViewController: telrController)
 self.navigationController?.present(nav, animated: true, completion: nil)
+
+```
+
+
+## Delegate method for get response from payment gateway
+
+```python
+
+//Mark:-This call when payment cancel by user
+func didPaymentCancel()
+
+//Mark:-This call when payment successful.
+func didPaymentSuccess(response:TelrResponseModel)
+
+//Mark:-This call when payment getting failed with any reason.
+func didPaymentFail(messge:String)
 
 ```
 
@@ -116,7 +142,6 @@ extension ViewController:TelrControllerDelegate{
         
         print("TransRef \(String(describing: response.transRef))")
         
-        //Mark:- Save card management it save only one card at time.
         //For save the card you need to store tranRef and when you are going to make second trans using thistranRef
         self.displaySavedCard()
       
@@ -144,20 +169,6 @@ let savedCard = TelrResponseModel().getSavedCards()
 
 ```
 
-## Delegate method for get response from payment gateway
-
-```python
-
-//Mark:-This call when payment cancel by user
-func didPaymentCancel()
-
-//Mark:-This call when payment successful.
-func didPaymentSuccess(response:TelrResponseModel)
-
-//Mark:-This call when payment getting failed with any reason.
-func didPaymentFail(messge:String)
-
-```
 
 ## Payment request builder for both saved card and new card
 

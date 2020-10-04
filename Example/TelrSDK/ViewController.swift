@@ -13,8 +13,8 @@ class ViewController: UIViewController {
     let KEY:String = "BwxtF~dq9L#xgWZb" // TODO fill key
     let STOREID:String = "21941"  // TODO fill store id
     let EMAIL:String = "girish.spryox@gmail.com" // TODO fill email id
-    
     var paymentRequest:PaymentRequest?
+    
     @IBOutlet var payBtn: UIButton!
     @IBOutlet var showCardBtn: UIButton!
     @IBOutlet var cardSv: UIStackView!
@@ -146,7 +146,6 @@ extension ViewController:TelrControllerDelegate{
         
         print("TransRef \(String(describing: response.transRef))")
         
-        //Mark:- Save card management it save only one card at time.
         //For save the card you need to store tranRef and when you are going to make second trans using thistranRef
         self.displaySavedCard()
         
