@@ -18,13 +18,21 @@ Use this  [link](https://telr.com/about-telr/) to started.
 
 Use this  [link](https://telr.com/support/article-categories/getting-started/) to started.
 
+Inline-style: 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+Reference-style: 
+![alt text][logo]
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+
 ## Register with Telr
 
 Use this  [link](https://telr.com/support/knowledge-base/admin-system/) to find the step to register in our system.
 
 ## Requirements
 
-The Stripe iOS SDK requires Xcode 11 or later and is compatible with apps targeting iOS 9 or above. We support Catalyst on macOS 10.15 or later. 
+The Telr iOS SDK requires Xcode 11 or later and is compatible with apps targeting iOS 9 or above. We support Catalyst on macOS 10.15 or later. 
 
 
 ## Custom Installation
