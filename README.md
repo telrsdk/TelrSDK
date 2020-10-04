@@ -5,6 +5,12 @@ src='https://github.com/telrsdk/TelrSDK/blob/master/Example/TelrSDK/Images.xcass
 
 # TelrSDK
 
+
+[![Version](https://img.shields.io/cocoapods/v/TelrSDK.svg?style=flat)](https://cocoapods.org/pods/TelrSDK)
+[![License](https://img.shields.io/cocoapods/l/TelrSDK.svg?style=flat)](https://cocoapods.org/pods/TelrSDK)
+[![Platform](https://img.shields.io/cocoapods/p/TelrSDK.svg?style=flat)](https://cocoapods.org/pods/TelrSDK)
+
+
 Our mission is to build connections that remove fragmentation in the e-commerce ecosystem. We make these connections to enable our customers to go cashless, digitising the way that they accept payments.
 Use this  [link](https://telr.com/about-telr/) to started.
 
@@ -26,9 +32,6 @@ The Stripe iOS SDK requires Xcode 11 or later and is compatible with apps target
 Use this  [link](https://telr.com/support/knowledge-base/mobile-api-integration-guide/) to find the custom api.
 
 
-[![Version](https://img.shields.io/cocoapods/v/TelrSDK.svg?style=flat)](https://cocoapods.org/pods/TelrSDK)
-[![License](https://img.shields.io/cocoapods/l/TelrSDK.svg?style=flat)](https://cocoapods.org/pods/TelrSDK)
-[![Platform](https://img.shields.io/cocoapods/p/TelrSDK.svg?style=flat)](https://cocoapods.org/pods/TelrSDK)
 
 ## Example
 
