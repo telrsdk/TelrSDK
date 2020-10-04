@@ -32,7 +32,6 @@ class ViewController: UIViewController {
             cardSv.isHidden = false
             showCardBtn.setTitle("Hide",for: .normal)
             
-        
         }else{
             cardSv.isHidden = true
             showCardBtn.setTitle("Show stored cards",for: .normal)
