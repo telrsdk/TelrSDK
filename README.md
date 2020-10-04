@@ -18,9 +18,10 @@ Use this  [link](https://telr.com/support/knowledge-base/mobile-api-integration-
 
 These card numbers can be used when testing your integration to the payment gateway. These cards will not work for live transactions.
 
-Card number | Type | CVV | MPI
----                                | --- | --- | --- 
-4000 0000 0000 0002 | Visa | 123 | No 
+| Card number  | Type  | CVV | MPI |
+| :------------ |:---------------|:-----|:-----|
+| 4000 0000 0000 0002      | Visa | 123 | No |
+
 
 Use this  [link](https://telr.com/support/article-categories/getting-started/) to started.
 
