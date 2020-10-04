@@ -20,7 +20,20 @@ These card numbers can be used when testing your integration to the payment gate
 
 | Card number  | Type  | CVV | MPI |
 | :------------ |:---------------|:-----|:-----|
-| 4000 0000 0000 0002      | Visa | 123 | No |
+| 4111 1111 1111 1111 | Visa | 123 | Yes |
+| 4444 3333 2222 1111 | Visa | 123 | Yes |
+| 4444 4244 4444 4440 | Visa | 123 | Yes |
+| 4444 4444 4444 4448 | Visa | 123 | Yes |
+| 4012 8888 8888 1881 | Visa | 123 | Yes |
+| 5105 1051 0510 5100 | Mastercard | 123 | No |
+| 5454 5454 5454 5454 | Mastercard | 123 | Yes |
+| 5555 5555 5555 4444 | Mastercard | 123 | Yes |
+| 5555 5555 5555 5557 | Mastercard | 123 | Yes |
+| 5581 5822 2222 2229 | Mastercard | 123 | Yes |
+| 5641 8209 0009 7002 | Maestro UK | 123 | Yes |
+| 6767 0957 4000 0005 | Solo | 123 | No |
+| 3434 343434 34343 | American Express | 1234 | No |
+| 3566 0020 2014 0006 | JCB | 123 | No |
 
 
 Use this  [link](https://telr.com/support/article-categories/getting-started/) to started.
