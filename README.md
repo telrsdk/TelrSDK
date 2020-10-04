@@ -5,11 +5,23 @@ src='https://github.com/telrsdk/TelrSDK/blob/master/Example/TelrSDK/Images.xcass
 
 # TelrSDK
 
-Foobar is a Python library for dealing with word pluralization.
+Our mission is to build connections that remove fragmentation in the e-commerce ecosystem. We make these connections to enable our customers to go cashless, digitising the way that they accept payments.
+Use this  [link](https://telr.com/about-telr/) to started.
 
 ## Custom Installation
 
 Use this  [link](https://telr.com/support/knowledge-base/mobile-api-integration-guide/) to find the custom api.
+
+## Getting Started
+
+Use this  [link](https://telr.com/support/article-categories/getting-started/) to started.
+
+## Register with Telr
+
+Use this  [link](https://telr.com/support/knowledge-base/admin-system/) to find the step to register in our system.
+
+
+
 
 [![Version](https://img.shields.io/cocoapods/v/TelrSDK.svg?style=flat)](https://cocoapods.org/pods/TelrSDK)
 [![License](https://img.shields.io/cocoapods/l/TelrSDK.svg?style=flat)](https://cocoapods.org/pods/TelrSDK)
