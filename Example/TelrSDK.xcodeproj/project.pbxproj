@@ -14,6 +14,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		840EA383252A2DFB008C58B0 /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 840EA382252A2DFB008C58B0 /* demo.gif */; };
 		B5AD22903C6CAD96B46B2158 /* Pods_TelrSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F28F0EBF2D6439AB05385DF /* Pods_TelrSDK_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6F28F0EBF2D6439AB05385DF /* Pods_TelrSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TelrSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		840EA382252A2DFB008C58B0 /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
 		9A577E61E2A2ABE9218F9E7E /* Pods-TelrSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelrSDK_Example.debug.xcconfig"; path = "Target Support Files/Pods-TelrSDK_Example/Pods-TelrSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C6A403CC92A813C4DE4D04D5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CC1D6869F91A2F5392DBED2B /* TelrSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TelrSDK.podspec; path = ../TelrSDK.podspec; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				840EA382252A2DFB008C58B0 /* demo.gif */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
@@ -248,6 +251,7 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				840EA383252A2DFB008C58B0 /* demo.gif in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
