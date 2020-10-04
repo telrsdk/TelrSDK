@@ -290,31 +290,15 @@ extension ViewController{
 ## Authorisation response
 
 | Field  | Description |
-| ------------- | ------------- |
-| status  | Authorisation status. A indicates an authorised transaction. H also indicates an
-authorised transaction, but where the transaction has been placed on hold.
-Any other value indicates that the request could not be processed.  |
-| code  | If the transaction was authorised, this contains the authorisation code from
-the card issuer. Otherwise it contains a code indicating why the transaction
-could not be processed.  |
+| :------------- | :------------- |
+| status  | Authorisation status. A indicates an authorised transaction. H also indicates an authorised transaction, but where the transaction has been placed on hold. Any other value indicates that the request could not be processed.  |
+| code  | If the transaction was authorised, this contains the authorisation code from the card issuer. Otherwise it contains a code indicating why the transaction could not be processed.  |
 | message  | The authorisation or processing error message.  |
 |  tranref  | The payment gateway transaction reference allocated to this request.  |
-| cvv  | Result of the CVV check:
-Y = CVV matched OK
-N = CVV not matched
-X = CVV not checked
-E = Error, unable to check CVV  |
-| avs  | Result of the AVS check:
-Y = AVS matched OK
-P = Partial match (for example, post-code only)
-N = AVS not matched
-X = AVS not checked
-E = Error, unable to check AVS  |
-| cardcode  | Code to indicate the card type used in the transaction. See the code list at the
-end of the document for a list of card codes. |
-| cardlast4  | The last 4 digits of the card number used in the transaction. This is supplied for
-all payment types (including the Hosted Payment Page method) except for
-PayPal.  |
+| cvv  | Result of the CVV check: Y = CVV matched OK N = CVV not matched X = CVV not checked E = Error, unable to check CVV  |
+| avs  | Result of the AVS check: Y = AVS matched OK P = Partial match (for example, post-code only) N = AVS not matched X = AVS not checked E = Error, unable to check AVS  |
+| cardcode  | Code to indicate the card type used in the transaction. See the code list at the end of the document for a list of card codes. |
+| cardlast4  | The last 4 digits of the card number used in the transaction. This is supplied for all payment types (including the Hosted Payment Page method) except for PayPal. |
 
 
 ## Test Cards
