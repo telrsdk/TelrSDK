@@ -15,60 +15,58 @@ class ViewController: UIViewController {
     let EMAIL:String = "girish.spryox@gmail.com" // TODO fill email id
     
     var paymentRequest:PaymentRequest?
-    
+    @IBOutlet var payBtn: UIButton!
     @IBOutlet var showCardBtn: UIButton!
     @IBOutlet var cardSv: UIStackView!
     @IBOutlet var amountTxt: UITextField!
-    @IBOutlet var cardTxt: UILabel!
+    @IBOutlet var firstNameTxt: UITextField!
+    @IBOutlet var lastNameTxt: UITextField!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var cardDetailsArray : [TelrResponseModel] = []
     
     @IBAction func showcardbtnPressed(_ sender: Any) {
-        
-        cardTxt.text = "**** **** **** " + getSavedData(key: "last4")
         
         if(cardSv.isHidden == true){
             
             cardSv.isHidden = false
-            
             showCardBtn.setTitle("Hide",for: .normal)
+            
         
         }else{
-            
             cardSv.isHidden = true
+            showCardBtn.setTitle("Show stored cards",for: .normal)
             
-            showCardBtn.setTitle("Show stored card",for: .normal)
         }
     }
     @IBAction func payBtnPressed(_ sender: Any) {
         
-        //Mark:-If you what change the back button as custome back button on navigation
-        let customBackButton = UIButton(type: .custom)
-        customBackButton.setTitle("Back", for: .normal)
-        customBackButton.setTitleColor(.black, for: .normal)
+        if((self.amountTxt.text ?? "").isEmpty){
+            self.showAlert(message: "Enter amount", type: "Error")
+        }else if((self.firstNameTxt.text ?? "").isEmpty){
+            self.showAlert(message: "Enter first name", type: "Error")
+        }else if((self.lastNameTxt.text ?? "").isEmpty){
+            self.showAlert(message: "Enter last name", type: "Error")
+        }else {
+            //Mark:-If you what change the back button as custome back button on navigation
+            let customBackButton = UIButton(type: .custom)
+            customBackButton.setTitle("Back", for: .normal)
+            customBackButton.setTitleColor(.black, for: .normal)
+        
+            paymentRequest = preparePaymentRequest()
+            let telrController = TelrController()
+            telrController.delegate = self
+            telrController.customBackButton = customBackButton
+            telrController.paymentRequest = paymentRequest!
+            self.navigationController?.pushViewController(telrController, animated: true)
+        }
+    }
     
-        paymentRequest = preparePaymentRequest()
-        let telrController = TelrController()
-        telrController.delegate = self
-        telrController.customBackButton = customBackButton
-        telrController.paymentRequest = paymentRequest!
-        self.navigationController?.pushViewController(telrController, animated: true)
-        
-
-    }
-    @IBAction func payBtn2Pressed(_ sender: Any) {
-        
-        paymentRequest = preparePaymentRequestSaveCard()
-        let telrController = TelrController()
-        telrController.delegate = self
-        telrController.paymentRequest = paymentRequest!
-        let nav = UINavigationController(rootViewController: telrController)
-        self.navigationController?.present(nav, animated: true, completion: nil)
-       
-    }
+   
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
-       
         let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 20))
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 20))
         imageView.contentMode = .scaleAspectFit
@@ -76,36 +74,44 @@ class ViewController: UIViewController {
         imageView.image = image
         logoContainer.addSubview(imageView)
         self.navigationItem.titleView = logoContainer
-        
+        self.setupToHideKeyboardOnTapOnView()
         self.displaySavedCard()
     
     }
-
     private func displaySavedCard() {
-        if(getSavedData(key: "last4").isEmpty){
+        let savedCard = TelrResponseModel().getSavedCards()
+        self.cardDetailsArray = savedCard
+        if(savedCard.count == 0){
              
-             showCardBtn.isHidden = true
-        
+            showCardBtn.isHidden = true
+            cardSv.isHidden = true
+            showCardBtn.setTitle("Show stored cards",for: .normal)
+            
          }else{
             
-             showCardBtn.isHidden = false
-         }
+            showCardBtn.isHidden = false
+            cardSv.isHidden = false
+            showCardBtn.setTitle("Hide",for: .normal)
+            
+        }
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+        self.collectionView.reloadData()
     }
-    private func getSavedData(key:String) -> String{
     
-        let defaults = UserDefaults.standard
+    private func showAlert(message:String,type:String){
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+               
+                let alert = UIAlertController(title: type, message: message, preferredStyle: UIAlertController.Style.alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+           
+                self.present(alert, animated: true, completion: nil)
+                
+            }
+           
+        }
     
-        return defaults.string(forKey: key) ?? ""
-
-    }
-    private func saveData(key:String, value:String){
-        let defaults = UserDefaults.standard
-        defaults.set(value, forKey: key)
-    }
-
-
-
-
 }
 
 //Mark:- Payment Request Builder
@@ -114,7 +120,8 @@ extension ViewController:TelrControllerDelegate{
     
     //Mark:- This method call when user click on back button
     func didPaymentCancel() {
-         print("didPaymentCancel")
+        print("didPaymentCancel")
+        self.showAlert(message: "didPaymentCancel", type: "Cancel")
     }
     
     //Mark:- This method call when payment done successfully
@@ -138,34 +145,61 @@ extension ViewController:TelrControllerDelegate{
         
         print("CVV \(String(describing: response.cvv))")
         
-        print("TranRef \(String(describing: response.tranRef))")
-        
+        print("TransRef \(String(describing: response.transRef))")
         
         //Mark:- Save card management it save only one card at time.
         //For save the card you need to store tranRef and when you are going to make second trans using thistranRef
-        
-        if let ref = response.tranRef{
-            saveData(key: "ref", value: ref)
-        }
-        if let last4 = response.cardLast4{
-            saveData(key: "last4", value: last4)
-        }
         self.displaySavedCard()
+        
+        self.showAlert(message: "didPaymentSuccess", type: "Success")
       
     }
     
     //Mark:- This method call when user click on cancel button and if payment get failed
     func didPaymentFail(messge: String) {
-         print("didPaymentFail \(messge)")
+        print("didPaymentFail")
+        self.showAlert(message: "didPaymentFail \(messge)", type: "Fail")
     }
-    
-    func didCancelPayment() {
-        print("didCancelPayment")
-    }
-    
-    
+        
 }
 
+extension ViewController : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.cardDetailsArray.count
+    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! Cell
+        let model = self.cardDetailsArray[indexPath.item]
+        cell.backView.layer.cornerRadius = 10
+        
+        cell.holderNameLbl.text = "\(model.billingFName ?? "") \(model.billingLName ?? "")"
+        
+        cell.cardNumberLbl.text = " **** **** **** \(model.cardLast4 ?? "")"
+        cell.payBtn.tag = indexPath.item
+        cell.payBtn.addTarget(self, action: #selector(payBtnPressed), for: .touchUpInside)
+        
+        return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
+    @objc func payBtnPressed(btn:UIButton){
+        if((self.amountTxt.text ?? "").isEmpty){
+            self.showAlert(message: "Enter amount", type: "Error")
+        }else{
+            let cardDetails = self.cardDetailsArray[btn.tag]
+            paymentRequest = preparePaymentRequestSaveCard(lastresponse: cardDetails)
+            let telrController = TelrController()
+            telrController.delegate = self
+            telrController.paymentRequest = paymentRequest!
+            let nav = UINavigationController(rootViewController: telrController)
+            self.navigationController?.present(nav, animated: true, completion: nil)
+        }
+        
+    }
+    
+}
 
 //Mark:- Payment Request Builder
 extension ViewController{
@@ -203,9 +237,9 @@ extension ViewController{
      
          paymentReq.billingEmail = EMAIL
      
-         paymentReq.billingFName = "Hany"
+         paymentReq.billingFName = self.firstNameTxt.text!
      
-         paymentReq.billingLName = "Sakr"
+         paymentReq.billingLName = self.lastNameTxt.text!
      
          paymentReq.billingTitle = "Mr"
      
@@ -224,56 +258,54 @@ extension ViewController{
      }
 
 
-     private func preparePaymentRequestSaveCard() -> PaymentRequest{
+    private func preparePaymentRequestSaveCard(lastresponse:TelrResponseModel) -> PaymentRequest{
 
      
-         let paymentReq = PaymentRequest()
+        let paymentReq = PaymentRequest()
      
-         paymentReq.key = KEY
+        paymentReq.key = lastresponse.key ?? ""
      
-         paymentReq.store = STOREID
+        paymentReq.store = lastresponse.store ?? ""
      
-         paymentReq.appId = "123456789"
+        paymentReq.appId = lastresponse.appId ?? ""
      
-         paymentReq.appName = "TelrSDK"
+        paymentReq.appName = lastresponse.appName ?? ""
      
-         paymentReq.appUser = "123456"
+        paymentReq.appUser = lastresponse.appUser ?? ""
      
-         paymentReq.appVersion = "0.0.1"
+        paymentReq.appVersion = lastresponse.appVersion ?? ""
      
-         paymentReq.transTest = "1"
+        paymentReq.transTest = lastresponse.transTest ?? ""
      
-         paymentReq.transType = "paypage"
+        paymentReq.transType = lastresponse.transType ?? ""
      
-         paymentReq.transClass = "ecom"
+        paymentReq.transClass = lastresponse.transClass ?? ""
      
          paymentReq.transCartid = String(arc4random())
      
-         paymentReq.transDesc = "Test API"
+        paymentReq.transDesc = lastresponse.transDesc ?? ""
      
-         paymentReq.transCurrency = "AED"
+        paymentReq.transCurrency = lastresponse.transCurrency ?? ""
      
-         paymentReq.billingFName = "Hany"
+        paymentReq.billingFName = lastresponse.billingFName ?? ""
      
-         paymentReq.billingLName = "Sakr"
+        paymentReq.billingLName = lastresponse.billingLName ?? ""
      
-         paymentReq.billingTitle = "Mr"
+        paymentReq.billingTitle = lastresponse.billingTitle ?? ""
      
-         paymentReq.city = "Dubai"
+        paymentReq.city = lastresponse.city ?? ""
      
-         paymentReq.country = "AE"
+         paymentReq.country = lastresponse.country ?? ""
      
-         paymentReq.region = "Dubai"
+         paymentReq.region = lastresponse.region ?? ""
      
-         paymentReq.address = "line 1"
+         paymentReq.address = lastresponse.address ?? ""
      
          paymentReq.transAmount = amountTxt.text!
      
-         paymentReq.transFirstRef = self.getSavedData(key: "ref")
+         paymentReq.transFirstRef = lastresponse.transFirstRef ?? ""
      
-         paymentReq.transRef = self.getSavedData(key: "ref")
-     
-         paymentReq.billingEmail = EMAIL
+         paymentReq.billingEmail = lastresponse.billingEmail ?? ""
      
          paymentReq.language = "ar"
      
@@ -283,4 +315,34 @@ extension ViewController{
 }
 
 
+class Cell: UICollectionViewCell {
+    
+    @IBOutlet weak var backView: UIView!
+    
+    @IBOutlet weak var holderNameLbl: UILabel!
+    
+    @IBOutlet weak var cardNumberLbl: UILabel!
+    
+    @IBOutlet weak var payBtn: UIButton!
+    
+    
+}
 
+
+extension UIViewController
+{
+    func setupToHideKeyboardOnTapOnView()
+    {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(UIViewController.dismissKeyboard))
+
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissKeyboard()
+    {
+        view.endEditing(true)
+    }
+}

@@ -10,7 +10,6 @@ import UIKit
 
 open class PaymentRequest:NSObject{
     
-    
     public var store = String()
     
     public var key = String()
@@ -66,3 +65,6 @@ open class PaymentRequest:NSObject{
     public override init(){}
         
 }
+
+
+
