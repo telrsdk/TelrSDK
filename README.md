@@ -18,7 +18,7 @@ Use this  [link](https://telr.com/about-telr/) to started.
 
 Use this  [link](https://telr.com/support/article-categories/getting-started/) to started.
 
-![](http://www.reactiongifs.us/wp-content/uploads/2013/10/nuh_uh_conan_obrien.gif)
+![](https://github.com/telrsdk/TelrSDK/blob/master/Example/TelrSDK/demo.gif)
 
 ## Register with Telr
 
