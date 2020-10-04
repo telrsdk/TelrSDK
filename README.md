@@ -14,6 +14,14 @@ Use this  [link](https://telr.com/support/knowledge-base/mobile-api-integration-
 
 ## Getting Started
 
+## Test Cards
+
+These card numbers can be used when testing your integration to the payment gateway. These cards will not work for live transactions.
+
+Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11
+--- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
+Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269
+
 Use this  [link](https://telr.com/support/article-categories/getting-started/) to started.
 
 ## Register with Telr
