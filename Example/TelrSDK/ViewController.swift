@@ -170,7 +170,6 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDataSource,U
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! Cell
         let model = self.cardDetailsArray[indexPath.item]
-        cell.backView.layer.cornerRadius = 10
         
         cell.holderNameLbl.text = "\(model.billingFName ?? "") \(model.billingLName ?? "")"
         
