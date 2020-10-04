@@ -8,15 +8,104 @@ src='https://github.com/telrsdk/TelrSDK/blob/master/Example/TelrSDK/Images.xcass
 Our mission is to build connections that remove fragmentation in the e-commerce ecosystem. We make these connections to enable our customers to go cashless, digitising the way that they accept payments.
 Use this  [link](https://telr.com/about-telr/) to started.
 
+## Getting Started
+
+Use this  [link](https://telr.com/support/article-categories/getting-started/) to started.
+
+## Register with Telr
+
+Use this  [link](https://telr.com/support/knowledge-base/admin-system/) to find the step to register in our system.
+
+## Requirements
+
+The Stripe iOS SDK requires Xcode 11 or later and is compatible with apps targeting iOS 9 or above. We support Catalyst on macOS 10.15 or later. 
+
+
 ## Custom Installation
 
 Use this  [link](https://telr.com/support/knowledge-base/mobile-api-integration-guide/) to find the custom api.
 
-## Getting Started
+
+[![Version](https://img.shields.io/cocoapods/v/TelrSDK.svg?style=flat)](https://cocoapods.org/pods/TelrSDK)
+[![License](https://img.shields.io/cocoapods/l/TelrSDK.svg?style=flat)](https://cocoapods.org/pods/TelrSDK)
+[![Platform](https://img.shields.io/cocoapods/p/TelrSDK.svg?style=flat)](https://cocoapods.org/pods/TelrSDK)
+
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+
+
+## Installation
+
+TelrSDK is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'TelrSDK'
+```
+
+## For Call the payment page we use two methoads
+
+```python
+
+//Mark:-If you what change the back button as custome back button on navigation
+let customBackButton = UIButton(type: .custom)
+customBackButton.setTitle("Back", for: .normal)
+customBackButton.setTitleColor(.black, for: .normal)
+
+//Mark:-Use this for push the telr payment page.
+paymentRequest = preparePaymentRequest()
+let telrController = TelrController()
+telrController.delegate = self
+telrController.customBackButton = customBackButton
+telrController.paymentRequest = paymentRequest!
+self.navigationController?.pushViewController(telrController, animated: true)
+
+//Mark:-Use this for present the telr payment page.
+paymentRequest = preparePaymentRequestSaveCard(lastresponse: cardDetails)
+let telrController = TelrController()
+telrController.delegate = self
+telrController.paymentRequest = paymentRequest!
+let nav = UINavigationController(rootViewController: telrController)
+self.navigationController?.present(nav, animated: true, completion: nil)
+
+```
+
+## For getting the saved card you can use
+### (Its work locally using user default card will deleted when app is deleted)
+```python
+
+//Mark:- This return card details of saved card.
+let savedCard = TelrResponseModel().getSavedCards()
+
+```
+
+
+## Delegate method for get response from payment gateway
+
+```python
+
+//Mark:-This call when payment cancel by user
+func didPaymentCancel()
+
+//Mark:-This call when payment successful.
+func didPaymentSuccess(response:TelrResponseModel)
+
+//Mark:-This call when payment getting failed with any reason.
+func didPaymentFail(messge:String)
+
+```
+
+
+
+
+
 
 ## Test Cards
 
 These card numbers can be used when testing your integration to the payment gateway. These cards will not work for live transactions.
+
 
 | Card number  | Type  | CVV | MPI |
 | :------------ |:---------------|:-----|:-----|
@@ -36,33 +125,7 @@ These card numbers can be used when testing your integration to the payment gate
 | 3566 0020 2014 0006 | JCB | 123 | No |
 
 
-Use this  [link](https://telr.com/support/article-categories/getting-started/) to started.
 
-## Register with Telr
-
-Use this  [link](https://telr.com/support/knowledge-base/admin-system/) to find the step to register in our system.
-
-
-
-
-[![Version](https://img.shields.io/cocoapods/v/TelrSDK.svg?style=flat)](https://cocoapods.org/pods/TelrSDK)
-[![License](https://img.shields.io/cocoapods/l/TelrSDK.svg?style=flat)](https://cocoapods.org/pods/TelrSDK)
-[![Platform](https://img.shields.io/cocoapods/p/TelrSDK.svg?style=flat)](https://cocoapods.org/pods/TelrSDK)
-
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-TelrSDK is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'TelrSDK'
-```
 
 ## Author
 
