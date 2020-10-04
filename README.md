@@ -100,9 +100,125 @@ func didPaymentFail(messge:String)
 
 ```
 
+## Payment request builder for both saved card and new card
+
+```python
+
+//Mark:- Payment Request Builder
+extension ViewController{
+    
+     private func preparePaymentRequest() -> PaymentRequest{
+     
+     
+         let paymentReq = PaymentRequest()
+     
+         paymentReq.key = KEY
+    
+         paymentReq.store = STOREID
+     
+         paymentReq.appId = "123456789"
+    
+         paymentReq.appName = "TelrSDK"
+     
+         paymentReq.appUser = "123456"
+     
+         paymentReq.appVersion = "0.0.1"
+     
+         paymentReq.transTest = "1"
+    
+         paymentReq.transType = "auth"
+    
+         paymentReq.transClass = "paypage"
+     
+         paymentReq.transCartid = String(arc4random())
+     
+         paymentReq.transDesc = "Test API"
+     
+         paymentReq.transCurrency = "AED"
+     
+         paymentReq.transAmount = amountTxt.text!
+     
+         paymentReq.billingEmail = EMAIL
+     
+         paymentReq.billingFName = self.firstNameTxt.text!
+     
+         paymentReq.billingLName = self.lastNameTxt.text!
+     
+         paymentReq.billingTitle = "Mr"
+     
+         paymentReq.city = "Dubai"
+     
+         paymentReq.country = "AE"
+     
+         paymentReq.region = "Dubai"
+     
+         paymentReq.address = "line 1"
+     
+         paymentReq.language = "en"
+     
+         return paymentReq
+
+     }
 
 
+    private func preparePaymentRequestSaveCard(lastresponse:TelrResponseModel) -> PaymentRequest{
 
+     
+        let paymentReq = PaymentRequest()
+     
+        paymentReq.key = lastresponse.key ?? ""
+     
+        paymentReq.store = lastresponse.store ?? ""
+     
+        paymentReq.appId = lastresponse.appId ?? ""
+     
+        paymentReq.appName = lastresponse.appName ?? ""
+     
+        paymentReq.appUser = lastresponse.appUser ?? ""
+     
+        paymentReq.appVersion = lastresponse.appVersion ?? ""
+     
+        paymentReq.transTest = lastresponse.transTest ?? ""
+     
+        paymentReq.transType = lastresponse.transType ?? ""
+     
+        paymentReq.transClass = lastresponse.transClass ?? ""
+     
+         paymentReq.transCartid = String(arc4random())
+     
+        paymentReq.transDesc = lastresponse.transDesc ?? ""
+     
+        paymentReq.transCurrency = lastresponse.transCurrency ?? ""
+     
+        paymentReq.billingFName = lastresponse.billingFName ?? ""
+     
+        paymentReq.billingLName = lastresponse.billingLName ?? ""
+     
+        paymentReq.billingTitle = lastresponse.billingTitle ?? ""
+     
+        paymentReq.city = lastresponse.city ?? ""
+     
+         paymentReq.country = lastresponse.country ?? ""
+     
+         paymentReq.region = lastresponse.region ?? ""
+     
+         paymentReq.address = lastresponse.address ?? ""
+     
+         paymentReq.transAmount = amountTxt.text!
+     
+         paymentReq.transFirstRef = lastresponse.transFirstRef ?? ""
+     
+         paymentReq.billingEmail = lastresponse.billingEmail ?? ""
+     
+         paymentReq.language = "ar"
+     
+         return paymentReq
+
+     }
+}
+
+
+```
 
 
 ## Test Cards
