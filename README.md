@@ -48,6 +48,12 @@ it, simply add the following line to your Podfile:
 pod 'TelrSDK'
 ```
 
+Make sure you import the sdk where you want use it using below code
+
+```ruby
+import TelrSDK
+```
+
 ## For Call the payment page we use two methoads
 
 ```python
@@ -75,6 +81,60 @@ self.navigationController?.present(nav, animated: true, completion: nil)
 
 ```
 
+Also confrim the delegate methods
+
+```ruby
+extension ViewController:TelrControllerDelegate{
+    
+    
+    //Mark:- This method call when user click on back button
+    func didPaymentCancel() {
+        print("didPaymentCancel")
+        
+    }
+    
+    //Mark:- This method call when payment done successfully
+    func didPaymentSuccess(response: TelrResponseModel) {
+        
+        print("didPaymentSuccess")
+           
+        print("Trace \(String(describing: response.trace))")
+        
+        print("Status \(String(describing: response.status))")
+        
+        print("Avs \(String(describing: response.avs))")
+        
+        print("Code \(String(describing: response.code))")
+        
+        print("Ca_valid \(String(describing: response.ca_valid))")
+        
+        print("Card Code \(String(describing: response.cardCode))")
+        
+        print("Card Last4 \(String(describing: response.cardLast4))")
+        
+        print("CVV \(String(describing: response.cvv))")
+        
+        print("TransRef \(String(describing: response.transRef))")
+        
+        //Mark:- Save card management it save only one card at time.
+        //For save the card you need to store tranRef and when you are going to make second trans using thistranRef
+        self.displaySavedCard()
+      
+      
+    }
+    
+    //Mark:- This method call when user click on cancel button and if payment get failed
+    func didPaymentFail(messge: String) {
+        print("didPaymentFail  \(messge)")
+        
+    }
+    
+   
+        
+}
+
+```
+
 ## For getting the saved card you can use
 ### (Its work locally using user default card will deleted when app is deleted)
 ```python
@@ -83,7 +143,6 @@ self.navigationController?.present(nav, animated: true, completion: nil)
 let savedCard = TelrResponseModel().getSavedCards()
 
 ```
-
 
 ## Delegate method for get response from payment gateway
 
