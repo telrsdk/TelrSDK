@@ -18,13 +18,7 @@ Use this  [link](https://telr.com/about-telr/) to started.
 
 Use this  [link](https://telr.com/support/article-categories/getting-started/) to started.
 
-Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-Reference-style: 
-![alt text][logo]
-
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+![](http://www.reactiongifs.us/wp-content/uploads/2013/10/nuh_uh_conan_obrien.gif)
 
 ## Register with Telr
 
