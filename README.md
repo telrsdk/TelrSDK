@@ -98,7 +98,7 @@ self.navigationController?.present(nav, animated: true, completion: nil)
 
 //Mark:-This call when the payment is cancelled by user
 func didPaymentCancel()
-//Mark:-This call when the payment successful.
+//Mark:-This call when the payment is successful.
 func didPaymentSuccess(response:TelrResponseModel)
 //Mark:-This call when the payment is declined due to any reason.
 func didPaymentFail(messge:String)
