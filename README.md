@@ -55,12 +55,12 @@ Make sure you import the sdk where you want use it using below code
 ```ruby
 import TelrSDK
 ```
-Use this to set the details of store. make sure you are using your stoe details
+Use this to set the details of store. make sure you are using your store details
 
 ```ruby
-let KEY:String = "BwxtF~dq9L#xgWZb" // TODO fill key
-let STOREID:String = "21941"  // TODO fill store id
-let EMAIL:String = "girish.spryox@gmail.com" // TODO fill email id
+let KEY:String = " jT4F2^PjBp-n8jbr" // TODO fill key
+let STOREID:String = "24717"  // TODO fill store id
+let EMAIL:String = "test@test.com" // TODO fill email id
 
 ```
 
@@ -160,32 +160,35 @@ extension ViewController:TelrControllerDelegate{
 
 ```
 
-## For getting the saved card you can use
+## Saved cards
 ### (Its work locally using user default card will deleted when app is deleted)
 ```python
 
-//Mark:- This return card details of saved card.
+//Mark:- This returns masked card details of saved card.
 let savedCard = TelrResponseModel().getSavedCards()
 
 ```
 
-## For Without CVV use below code while binding the payment request
+## To use Saved Card without CVV, please use below code while binding the payment request
 ```python
 
-//Mark:- Pass sale and cont to the type and class
+//Mark:- Set type as ‘sale’, class as ‘cont’ and send previous transaction reference in ‘ref’ parameter
 
 paymentReq.transType = "sale"
 paymentReq.transClass = "cont"
+paymentReq.transRef = lastresponse.transRef ?? ""
 
 ```
 
-## For With CVV use below code while binding the payment request
+## To use Saved Card with CVV, please use below code while binding the payment request
 ```python
 
-//Mark:- Pass auth and paypage to the type and class
+//Mark:- Set type as ‘paypage’ and class as ‘ecom’ and send previous transaction reference in ‘firstref’ parameter
 
-paymentReq.transType = "auth"
-paymentReq.transClass = "paypage"
+
+paymentReq.transType = "paypage"
+paymentReq.transClass = "ecom"
+paymentReq.transFirstRef = lastresponse.transFirstRef ?? ""
 
 ```
 
@@ -196,114 +199,124 @@ paymentReq.transClass = "paypage"
 //Mark:- Payment Request Builder
 extension ViewController{
     
-     private func preparePaymentRequest() -> PaymentRequest{
-     
-     
-         let paymentReq = PaymentRequest()
-     
-         paymentReq.key = KEY
+    private func preparePaymentRequest() -> PaymentRequest{
     
-         paymentReq.store = STOREID
-     
-         paymentReq.appId = "123456789"
     
-         paymentReq.appName = "TelrSDK"
-     
-         paymentReq.appUser = "123456"
-     
-         paymentReq.appVersion = "0.0.1"
-     
-         paymentReq.transTest = "1"
-    
-         paymentReq.transType = "auth"
-    
-         paymentReq.transClass = "paypage"
-     
-         paymentReq.transCartid = String(arc4random())
-     
-         paymentReq.transDesc = "Test API"
-     
-         paymentReq.transCurrency = "AED"
-     
-         paymentReq.transAmount = amountTxt.text!
-     
-         paymentReq.billingEmail = EMAIL
-     
-         paymentReq.billingFName = self.firstNameTxt.text!
-     
-         paymentReq.billingLName = self.lastNameTxt.text!
-     
-         paymentReq.billingTitle = "Mr"
-     
-         paymentReq.city = "Dubai"
-     
-         paymentReq.country = "AE"
-     
-         paymentReq.region = "Dubai"
-     
-         paymentReq.address = "line 1"
-     
-         paymentReq.language = "en"
-     
-         return paymentReq
-
-     }
-
-
-    private func preparePaymentRequestSaveCard(lastresponse:TelrResponseModel) -> PaymentRequest{
-
-     
         let paymentReq = PaymentRequest()
-     
-        paymentReq.key = lastresponse.key ?? ""
-     
-        paymentReq.store = lastresponse.store ?? ""
-     
-        paymentReq.appId = lastresponse.appId ?? ""
-     
-        paymentReq.appName = lastresponse.appName ?? ""
-     
-        paymentReq.appUser = lastresponse.appUser ?? ""
-     
-        paymentReq.appVersion = lastresponse.appVersion ?? ""
-     
-        paymentReq.transTest = lastresponse.transTest ?? ""
-     
-        paymentReq.transType = lastresponse.transType ?? ""
-     
-        paymentReq.transClass = lastresponse.transClass ?? ""
-     
+    
+        paymentReq.key = KEY
+   
+        paymentReq.store = STOREID
+    
+        paymentReq.appId = "123456789"
+   
+        paymentReq.appName = "TelrSDK"
+    
+        paymentReq.appUser = "123456"
+    
+        paymentReq.appVersion = "0.0.1"
+    
+        paymentReq.transTest = "1"//0
+   
+        paymentReq.transType = "paypage"
+   
+        paymentReq.transClass = "ecom"
+    
         paymentReq.transCartid = String(arc4random())
-     
-        paymentReq.transDesc = lastresponse.transDesc ?? ""
-     
-        paymentReq.transCurrency = lastresponse.transCurrency ?? ""
-     
-        paymentReq.billingFName = lastresponse.billingFName ?? ""
-     
-        paymentReq.billingLName = lastresponse.billingLName ?? ""
-     
-        paymentReq.billingTitle = lastresponse.billingTitle ?? ""
-     
-        paymentReq.city = lastresponse.city ?? ""
-     
-        paymentReq.country = lastresponse.country ?? ""
-     
-        paymentReq.region = lastresponse.region ?? ""
-     
-        paymentReq.address = lastresponse.address ?? ""
-     
+    
+        paymentReq.transDesc = "Test API"
+    
+        paymentReq.transCurrency = "AED"
+    
         paymentReq.transAmount = amountTxt.text!
-     
-        paymentReq.transFirstRef = lastresponse.transFirstRef ?? ""
-     
-        paymentReq.billingEmail = lastresponse.billingEmail ?? ""
-     
-        paymentReq.language = "ar"
-     
+    
+        paymentReq.billingEmail = EMAIL
+    
+        paymentReq.billingFName = self.firstNameTxt.text!
+    
+        paymentReq.billingLName = self.lastNameTxt.text!
+    
+        paymentReq.billingTitle = "Mr"
+    
+        paymentReq.city = "Dubai"
+    
+        paymentReq.country = "AE"
+    
+        paymentReq.region = "Dubai"
+    
+        paymentReq.address = "line 1"
+    
+        paymentReq.language = "en"
+    
         return paymentReq
 
-     }
+    }
+
+private func preparePaymentRequestSaveCard(lastresponse:TelrResponseModel) -> PaymentRequest{
+
+ 
+    let paymentReq = PaymentRequest()
+ 
+    paymentReq.key = lastresponse.key ?? ""
+ 
+    paymentReq.store = lastresponse.store ?? ""
+ 
+    paymentReq.appId = lastresponse.appId ?? ""
+ 
+    paymentReq.appName = lastresponse.appName ?? ""
+ 
+    paymentReq.appUser = lastresponse.appUser ?? ""
+ 
+    paymentReq.appVersion = lastresponse.appVersion ?? ""
+ 
+    paymentReq.transTest = lastresponse.transTest ?? ""
+    
+//        //Mark:- Without CVV
+//
+//        paymentReq.transType = "sale"
+//
+//        paymentReq.transClass = "cont"
+    
+    
+    //Mark:- With CVV
+
+    paymentReq.transType = "paypage"
+
+    paymentReq.transClass = "ecom"
+    
+    paymentReq.transFirstRef = lastresponse.transFirstRef ?? ""
+    
+    paymentReq.transRef = lastresponse.transRef ?? ""
+ 
+    paymentReq.transCartid = String(arc4random())
+ 
+    paymentReq.transDesc = lastresponse.transDesc ?? ""
+ 
+    paymentReq.transCurrency = lastresponse.transCurrency ?? ""
+ 
+    paymentReq.billingFName = lastresponse.billingFName ?? ""
+ 
+    paymentReq.billingLName = lastresponse.billingLName ?? ""
+ 
+    paymentReq.billingTitle = lastresponse.billingTitle ?? ""
+ 
+    paymentReq.city = lastresponse.city ?? ""
+ 
+    paymentReq.country = lastresponse.country ?? ""
+ 
+    paymentReq.region = lastresponse.region ?? ""
+ 
+    paymentReq.address = lastresponse.address ?? ""
+ 
+    paymentReq.transAmount = amountTxt.text!
+        
+    paymentReq.billingEmail = lastresponse.billingEmail ?? ""
+ 
+    paymentReq.language = "en"
+ 
+    return paymentReq
+
+ }
 }
 
 

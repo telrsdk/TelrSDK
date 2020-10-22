@@ -10,9 +10,9 @@ import UIKit
 import TelrSDK
 class ViewController: UIViewController {
     
-    let KEY:String = "BwxtF~dq9L#xgWZb" // TODO fill key
-    let STOREID:String = "21941"  // TODO fill store id
-    let EMAIL:String = "girish.spryox@gmail.com" // TODO fill email id
+    let KEY:String = " jT4F2^PjBp-n8jbr" // TODO fill key
+    let STOREID:String = "24717"  // TODO fill store id
+    let EMAIL:String = "test@test.com" // TODO fill email id
     var paymentRequest:PaymentRequest?
     
     @IBOutlet var payBtn: UIButton!
@@ -218,11 +218,11 @@ extension ViewController{
      
          paymentReq.appVersion = "0.0.1"
      
-         paymentReq.transTest = "1"
+         paymentReq.transTest = "1"//0
     
-         paymentReq.transType = "auth"
+         paymentReq.transType = "paypage"
     
-         paymentReq.transClass = "paypage"
+         paymentReq.transClass = "ecom"
      
          paymentReq.transCartid = String(arc4random())
      
@@ -273,16 +273,25 @@ extension ViewController{
         paymentReq.appVersion = lastresponse.appVersion ?? ""
      
         paymentReq.transTest = lastresponse.transTest ?? ""
-     
-        paymentReq.transType = lastresponse.transType ?? "" //"sale"//
-     
-        paymentReq.transClass = lastresponse.transClass ?? "" //"cont"//
+        
+//        //Mark:- Without CVV
+//
+//        paymentReq.transType = "sale"
+//
+//        paymentReq.transClass = "cont"
+        
+        
+        //Mark:- With CVV
+
+        paymentReq.transType = "paypage"
+
+        paymentReq.transClass = "ecom"
         
         paymentReq.transFirstRef = lastresponse.transFirstRef ?? ""
         
         paymentReq.transRef = lastresponse.transRef ?? ""
      
-         paymentReq.transCartid = String(arc4random())
+        paymentReq.transCartid = String(arc4random())
      
         paymentReq.transDesc = lastresponse.transDesc ?? ""
      
@@ -306,7 +315,7 @@ extension ViewController{
             
         paymentReq.billingEmail = lastresponse.billingEmail ?? ""
      
-        paymentReq.language = "ar"
+        paymentReq.language = "en"
      
         return paymentReq
 
