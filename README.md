@@ -253,6 +253,74 @@ extension ViewController{
         return paymentReq
 
     }
+    
+    private func preparePaymentRequestSaveCard(lastresponse:TelrResponseModel) -> PaymentRequest{
+
+     
+        let paymentReq = PaymentRequest()
+     
+        paymentReq.key = lastresponse.key ?? ""
+     
+        paymentReq.store = lastresponse.store ?? ""
+     
+        paymentReq.appId = lastresponse.appId ?? ""
+     
+        paymentReq.appName = lastresponse.appName ?? ""
+     
+        paymentReq.appUser = lastresponse.appUser ?? ""
+     
+        paymentReq.appVersion = lastresponse.appVersion ?? ""
+     
+        paymentReq.transTest = lastresponse.transTest ?? ""
+        
+//        //Mark:- Without CVV
+//
+//        paymentReq.transType = "sale"
+//
+//        paymentReq.transClass = "cont"
+        
+//        paymentReq.transRef = lastresponse.transRef ?? ""
+        
+        
+        //Mark:- With CVV
+
+        paymentReq.transType = "paypage"
+
+        paymentReq.transClass = "ecom"
+        
+        paymentReq.transFirstRef = lastresponse.transFirstRef ?? ""
+        
+        //
+        
+        paymentReq.transCartid = String(arc4random())
+     
+        paymentReq.transDesc = lastresponse.transDesc ?? ""
+     
+        paymentReq.transCurrency = lastresponse.transCurrency ?? ""
+     
+        paymentReq.billingFName = lastresponse.billingFName ?? ""
+     
+        paymentReq.billingLName = lastresponse.billingLName ?? ""
+     
+        paymentReq.billingTitle = lastresponse.billingTitle ?? ""
+     
+        paymentReq.city = lastresponse.city ?? ""
+     
+        paymentReq.country = lastresponse.country ?? ""
+     
+        paymentReq.region = lastresponse.region ?? ""
+     
+        paymentReq.address = lastresponse.address ?? ""
+     
+        paymentReq.transAmount = amountTxt.text!
+            
+        paymentReq.billingEmail = lastresponse.billingEmail ?? ""
+     
+        paymentReq.language = "en"
+     
+        return paymentReq
+
+     }
 
 
 }
