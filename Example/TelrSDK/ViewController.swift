@@ -280,6 +280,8 @@ extension ViewController{
 //
 //        paymentReq.transClass = "cont"
         
+//        paymentReq.transRef = lastresponse.transRef ?? ""
+        
         
         //Mark:- With CVV
 
@@ -289,8 +291,8 @@ extension ViewController{
         
         paymentReq.transFirstRef = lastresponse.transFirstRef ?? ""
         
-        paymentReq.transRef = lastresponse.transRef ?? ""
-     
+        //
+        
         paymentReq.transCartid = String(arc4random())
      
         paymentReq.transDesc = lastresponse.transDesc ?? ""
