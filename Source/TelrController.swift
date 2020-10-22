@@ -193,6 +193,7 @@ public class TelrController: UIViewController, XMLParserDelegate {
     @objc func loadPaymentPage(){
     
             let xml:String = self.initiatePaymentGateway(paymentRequest:self.paymentRequest)
+            print(xml)
             let data = xml.data(using: .utf8)
             let url = URL(string:"https://secure.telr.com/gateway/mobile.xml")
                
@@ -209,22 +210,135 @@ public class TelrController: UIViewController, XMLParserDelegate {
                     
                     if let data = data{
 
-
+                        let str = String(data: data, encoding: .utf8)!
+                        print(str)
                         let parser = XMLParser(data: data)
                         parser.delegate = self
                         parser.parse()
 
                         let xmlresponse = XML.parse(data)
 
+                        
                         if let message = xmlresponse["mobile","auth","message"].text{
                             
-                            DispatchQueue.main.async {
-                                self.delegate?.didPaymentFail(messge: message)
+                           
+                            let when = DispatchTime.now() + 0  // No waiting time
+                            DispatchQueue.main.asyncAfter(deadline: when) {
+                                
+                            if(message == "Authorised"){
+                                
+                                self._code = xmlresponse["mobile","auth","code"].text
 
+                                self._status = xmlresponse["mobile","auth","status"].text
+
+                                self._avs = xmlresponse["mobile","auth","avs"].text
+
+                                self._ca_valid = xmlresponse["mobile","auth","ca_valid"].text
+
+                                self._cardCode = xmlresponse["mobile","auth","cardcode"].text
+
+                                self._cardLast4 = xmlresponse["mobile","auth","cardlast4"].text
+
+                                self._cvv = xmlresponse["mobile","auth","cvv"].text!
+
+                                self._transRef = xmlresponse["mobile","auth","tranref"].text
+
+                                self._transFirstRef = xmlresponse["mobile","auth","tranfirstref"].text
+
+                                self._trace = xmlresponse["mobile","trace"].text
+
+                                let telrResponseModel = TelrResponseModel()
+                                
+                                telrResponseModel.message = "Your transaction is successful \(String(describing: self._trace))"
+                                telrResponseModel.code = self._code
+                                             
+                                telrResponseModel.status = self._status
+                                              
+                                telrResponseModel.ca_valid = self._ca_valid
+                                             
+                                telrResponseModel.avs = self._avs
+                                             
+                                telrResponseModel.cardCode = self._cardCode
+                                             
+                                telrResponseModel.cardLast4 = self._cardLast4
+                                            
+                                telrResponseModel.cvv = self._cvv
+                                             
+                                telrResponseModel.trace = self._trace
+                                
+                                telrResponseModel.store = self.paymentRequest.store
+                                
+                                telrResponseModel.key = self.paymentRequest.key
+                                
+                                telrResponseModel.deviceType = self.paymentRequest.deviceType
+                                
+                                telrResponseModel.deviceId = self.paymentRequest.deviceId
+                                
+                                telrResponseModel.appId = self.paymentRequest.appId
+                                
+                                telrResponseModel.appName = self.paymentRequest.appName
+                                
+                                telrResponseModel.appUser = self.paymentRequest.appUser
+                                
+                                telrResponseModel.appVersion = self.paymentRequest.appVersion
+                                
+                                telrResponseModel.transTest = self.paymentRequest.transTest
+                                
+                                telrResponseModel.transType = self.paymentRequest.transType
+                                
+                                telrResponseModel.transClass = self.paymentRequest.transClass
+                                
+                                telrResponseModel.transCartid = self.paymentRequest.transCartid
+                                
+                                telrResponseModel.transDesc = self.paymentRequest.transDesc
+                                
+                                telrResponseModel.transCurrency = self.paymentRequest.transCurrency
+                                
+                                telrResponseModel.transAmount = self.paymentRequest.transAmount
+                                
+                                telrResponseModel.billingEmail = self.paymentRequest.billingEmail
+                                
+                                telrResponseModel.billingFName = self.paymentRequest.billingFName
+                                
+                                telrResponseModel.billingLName = self.paymentRequest.billingLName
+                                
+                                telrResponseModel.billingTitle = self.paymentRequest.billingTitle
+                                
+                                telrResponseModel.city = self.paymentRequest.city
+                                
+                                telrResponseModel.country = self.paymentRequest.country
+                                
+                                telrResponseModel.region = self.paymentRequest.region
+                                
+                                telrResponseModel.address = self.paymentRequest.address
+                                
+                                telrResponseModel.language = self.paymentRequest.language
+                                
+                                telrResponseModel.transRef = self._transRef
+                                
+                                telrResponseModel.transFirstRef = self._transRef
+                                
+                                self.saveTheCard(card: telrResponseModel)
+                               
+                                self.delegate?.didPaymentSuccess(response: telrResponseModel)
+                                                          
                                 self.dismiss(animated: true, completion: nil)
-
+                                                          
                                 let _ = self.navigationController?.popViewController(animated: true)
+                                
+                            
+                             
+                            }else{
+                                DispatchQueue.main.async {
+                                    self.delegate?.didPaymentFail(messge: message)
+
+                                    self.dismiss(animated: true, completion: nil)
+
+                                    let _ = self.navigationController?.popViewController(animated: true)
+                                }
                             }
+                            }
+                           
 
                         }else{
 
@@ -302,7 +416,6 @@ public class TelrController: UIViewController, XMLParserDelegate {
                     let xmlresponse = XML.parse(data)
 
                     let statusMessage = xmlresponse["mobile","auth","message"]
-
 
                     self._code = xmlresponse["mobile","auth","code"].text
 
