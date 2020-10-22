@@ -169,6 +169,25 @@ let savedCard = TelrResponseModel().getSavedCards()
 
 ```
 
+## For Without CVV use below code while binding the payment request
+```python
+
+//Mark:- Pass sale and cont to the type and class
+
+paymentReq.transType = "sale"
+paymentReq.transClass = "cont"
+
+```
+
+## For With CVV use below code while binding the payment request
+```python
+
+//Mark:- Pass auth and paypage to the type and class
+
+paymentReq.transType = "auth"
+paymentReq.transClass = "paypage"
+
+```
 
 ## Payment request builder for both saved card and new card
 
