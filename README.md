@@ -161,7 +161,7 @@ extension ViewController:TelrControllerDelegate{
 ```
 
 ## Saved cards
-### (Its work locally using user default card will deleted when app is deleted)
+### (It works locally using user default. Masked Card details will be deleted when app is deleted)
 ```python
 
 //Mark:- This returns masked card details of saved card.
