@@ -368,7 +368,7 @@ These card numbers can be used when testing your integration to the payment gate
 
 ## Author
 
-Telr Sdk, telrsdk@gmail.com
+Telr SDK, support@telr.com
 
 ## License
 
