@@ -339,7 +339,6 @@ public class TelrController: UIViewController, XMLParserDelegate {
                             }
                             }
                            
-
                         }else{
 
                             let start = xmlresponse["mobile","webview","start"]
