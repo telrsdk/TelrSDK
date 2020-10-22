@@ -17,8 +17,7 @@ public class TelrResponseModel : Encodable & Decodable{
     @objc public var trace:String?
           
     @objc public var status:String?      // Authorisation status. A indicates an authorised transaction. H also indicates an authorised transaction, but where the transaction has been placed on hold. Any other value indicates that the request could not be processed.
-          
-    @objc public var avs:String?         /* Result of the AVS check:
+    @objc public var avs:String?         /* Result of the AVS check:-
            Y = AVS matched OK
            P = Partial match (for example, post-code only)
            N = AVS not matched
