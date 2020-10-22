@@ -11,8 +11,11 @@ import TelrSDK
 class ViewController: UIViewController {
     
     let KEY:String = " jT4F2^PjBp-n8jbr" // TODO fill key
+    
     let STOREID:String = "24717"  // TODO fill store id
+    
     let EMAIL:String = "test@test.com" // TODO fill email id
+    
     var paymentRequest:PaymentRequest?
     
     @IBOutlet var payBtn: UIButton!
