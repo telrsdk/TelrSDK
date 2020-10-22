@@ -55,7 +55,7 @@ Make sure you import the sdk where you want use it using below code
 ```ruby
 import TelrSDK
 ```
-Use this to set the details of store. make sure you are using your store details
+Use this to set the details of store. Make sure you are using your store details
 
 ```ruby
 let KEY:String = " jT4F2^PjBp-n8jbr" // TODO fill key
@@ -64,16 +64,16 @@ let EMAIL:String = "test@test.com" // TODO fill email id
 
 ```
 
-## For Call the payment page we use two methoads
+## To call the payment page you can use either of the two methods
 
 ```python
 
-//Mark:-If you what change the back button as custome back button on navigation
+//Mark:-If you want to change the back button as custom back button on navigation
 let customBackButton = UIButton(type: .custom)
 customBackButton.setTitle("Back", for: .normal)
 customBackButton.setTitleColor(.black, for: .normal)
 
-//Mark:-Use this for push the telr payment page.
+//Mark:-Use this to push the telr payment page.
 paymentRequest = preparePaymentRequest()
 let telrController = TelrController()
 telrController.delegate = self
@@ -81,7 +81,7 @@ telrController.customBackButton = customBackButton
 telrController.paymentRequest = paymentRequest!
 self.navigationController?.pushViewController(telrController, animated: true)
 
-//Mark:-Use this for present the telr payment page.
+//Mark:-Use this to present the telr payment page.
 paymentRequest = preparePaymentRequestSaveCard(lastresponse: cardDetails)
 let telrController = TelrController()
 telrController.delegate = self
@@ -96,30 +96,29 @@ self.navigationController?.present(nav, animated: true, completion: nil)
 
 ```python
 
-//Mark:-This call when payment cancel by user
+//Mark:-This call when the payment is cancelled by user
 func didPaymentCancel()
-
-//Mark:-This call when payment successful.
+//Mark:-This call when the payment successful.
 func didPaymentSuccess(response:TelrResponseModel)
-
-//Mark:-This call when payment getting failed with any reason.
+//Mark:-This call when the payment is declined due to any reason.
 func didPaymentFail(messge:String)
+
 
 ```
 
-Also confrim the delegate methods
+Also confirm the delegate methods
 
 ```ruby
 extension ViewController:TelrControllerDelegate{
     
     
-    //Mark:- This method call when user click on back button
+    //Mark:- This method will be called when user clicks on back button
     func didPaymentCancel() {
         print("didPaymentCancel")
         
     }
     
-    //Mark:- This method call when payment done successfully
+    //Mark:- This method will be called when the payment is completed successfully
     func didPaymentSuccess(response: TelrResponseModel) {
         
         print("didPaymentSuccess")
@@ -148,7 +147,8 @@ extension ViewController:TelrControllerDelegate{
       
     }
     
-    //Mark:- This method call when user click on cancel button and if payment get failed
+    //Mark:- This method will be called when user clicks on cancel button and the
+    payment gets failed
     func didPaymentFail(messge: String) {
         print("didPaymentFail  \(messge)")
         
