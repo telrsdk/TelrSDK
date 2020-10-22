@@ -141,7 +141,8 @@ extension ViewController:TelrControllerDelegate{
         
         print("TransRef \(String(describing: response.transRef))")
         
-        //For save the card you need to store tranRef and when you are going to make second trans using thistranRef
+        ////To save the card for future transactions, you will be required to store tranRef. When the customer will be attempting transaction using the previously used card tranRef will be used
+        
         self.displaySavedCard()
       
       
