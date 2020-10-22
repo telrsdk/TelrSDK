@@ -47,7 +47,7 @@ TelrSDK is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'TelrSDK'
+pod 'TelrSDK', "0.1.1"
 ```
 
 Make sure you import the sdk where you want use it using below code
