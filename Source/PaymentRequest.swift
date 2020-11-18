@@ -42,6 +42,8 @@ open class PaymentRequest:NSObject{
     
     public var billingEmail = String()
     
+    public var billingPhone = String()
+    
     public var billingFName = String()
     
     public var billingLName = String()

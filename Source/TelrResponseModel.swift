@@ -68,6 +68,8 @@ public class TelrResponseModel : Encodable & Decodable{
     @objc public var transAmount : String?
         
     @objc public var billingEmail : String?
+    
+    @objc public var billingPhone : String?
         
     @objc public var billingFName : String?
         

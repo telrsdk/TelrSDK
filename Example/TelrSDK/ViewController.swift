@@ -236,6 +236,8 @@ extension ViewController{
          paymentReq.transAmount = amountTxt.text!
      
          paymentReq.billingEmail = EMAIL
+        
+         paymentReq.billingPhone = "8888888888"
      
          paymentReq.billingFName = self.firstNameTxt.text!
      
@@ -319,6 +321,8 @@ extension ViewController{
         paymentReq.transAmount = amountTxt.text!
             
         paymentReq.billingEmail = lastresponse.billingEmail ?? ""
+        
+        paymentReq.billingPhone = lastresponse.billingPhone ?? ""
      
         paymentReq.language = "en"
      

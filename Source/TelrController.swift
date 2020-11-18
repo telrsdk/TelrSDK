@@ -298,6 +298,8 @@ public class TelrController: UIViewController, XMLParserDelegate {
                                 
                                 telrResponseModel.billingEmail = self.paymentRequest.billingEmail
                                 
+                                telrResponseModel.billingPhone = self.paymentRequest.billingPhone
+                                
                                 telrResponseModel.billingFName = self.paymentRequest.billingFName
                                 
                                 telrResponseModel.billingLName = self.paymentRequest.billingLName
@@ -494,6 +496,7 @@ public class TelrController: UIViewController, XMLParserDelegate {
             </tran>
             <billing>
                 <email>\(paymentRequest.billingEmail)</email>
+                <phone>\((paymentRequest.billingPhone))</phone>
                 <name>
                     <first>\(paymentRequest.billingFName)</first>
                     <last>\(paymentRequest.billingLName)</last>
@@ -632,6 +635,9 @@ extension TelrController : WKNavigationDelegate, WKUIDelegate, UIScrollViewDeleg
                         telrResponseModel.transAmount = self.paymentRequest.transAmount
                         
                         telrResponseModel.billingEmail = self.paymentRequest.billingEmail
+                        
+                        telrResponseModel.billingPhone = self.paymentRequest.billingPhone
+                        
                         
                         telrResponseModel.billingFName = self.paymentRequest.billingFName
                         
