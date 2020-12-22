@@ -1,9 +1,9 @@
 {
   "name": "TelrSDK",
-  "version": "0.1.0",
-  "summary": "A short description of TelrSDK.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Telr Sdk/TelrSDK",
+  "version": "0.1.2",
+  "summary": "We’re an award-winning payment aggregator+ provider.",
+  "description": "'We’re an award-winning payment aggregator+ provider. We really like startups and SMEs, and we design to their needs Our mission is to build connections that remove fragmentation in the e-commerce ecosystem. We make these connections to enable our customers to go cashless, digitising the way that they accept payments.'",
+  "homepage": "https://github.com/telrsdk/TelrSDK",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,13 @@
     "Telr Sdk": "telrsdk@gmail.com"
   },
   "source": {
-    "git": "https://github.com/Telr Sdk/TelrSDK.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/telrsdk/TelrSDK.git",
+    "tag": "0.1.2"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "TelrSDK/Classes/**/*"
+  "swift_versions": "5.0",
+  "source_files": "Source/**/*.swift",
+  "swift_version": "5.0"
 }

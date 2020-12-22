@@ -66,9 +66,52 @@ public class TelrController: UIViewController, XMLParserDelegate {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.presentationController?.presentedView?.gestureRecognizers?[0].isEnabled = false
         self.addBackButton()
+        self.addButtonsOfPaymentsView()
         
+        
+    }
+    
+    private func addButtonsOfPaymentsView(){
+        let viewBack = UIView()
+        
+        viewBack.backgroundColor = .white
+        
+        viewBack.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        
+        let TELRBTN = UIButton()
+        TELRBTN.frame = CGRect(x: 16, y:(self.view.frame.height/2)+150 , width: self.view.frame.width-32, height: 50)
+        TELRBTN.setTitle("PAY USING TELR PAYMENT", for: .normal)
+        TELRBTN.titleLabel?.textAlignment = .center
+        TELRBTN.addTarget(self, action: #selector(TELRBTNAction), for: .touchUpInside)
+        TELRBTN.backgroundColor = UIColor(red:7/255, green:110/255, blue:79/255, alpha:1.0)
+        TELRBTN.contentEdgeInsets = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
+        TELRBTN.setTitleColor(.white, for: .normal)
+        
+        viewBack.addSubview(TELRBTN)
+        
+        let TABBYBTN = UIButton()
+        TABBYBTN.frame = CGRect(x: 16, y:(self.view.frame.height/2)+220 , width: self.view.frame.width-32, height: 50)
+        TABBYBTN.setTitle("PAY USING TABBY PAYMENT", for: .normal)
+        TABBYBTN.titleLabel?.textAlignment = .center
+        TABBYBTN.addTarget(self, action: #selector(TABBYBTNAction), for: .touchUpInside)
+        TABBYBTN.backgroundColor = UIColor(red:0.24, green:0.93, blue:0.75, alpha:1.0)
+        TABBYBTN.contentEdgeInsets = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
+        TABBYBTN.setTitleColor(.black, for: .normal)
+        viewBack.addSubview(TABBYBTN)
+        self.view.addSubview(viewBack)
+    }
+    @objc func TELRBTNAction() {
+        self.addWebview()
+    }
+    
+    @objc func TABBYBTNAction() {
+        let telrController = TabbySelectionVC()
+        self.navigationController?.pushViewController(telrController, animated: true)
+    }
+    
+    private func addWebview(){
         DispatchQueue.main.async {
             
             self.navigationController?.presentationController?.presentedView?.gestureRecognizers?[0].isEnabled = false
@@ -76,11 +119,8 @@ public class TelrController: UIViewController, XMLParserDelegate {
             self.createWebView()
                    
         }
-
         self.loadPaymentPage()
-        
     }
-    
     func addBackButton() {
         
         if let customBackButton = self.customBackButton {

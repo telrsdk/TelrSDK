@@ -83,7 +83,7 @@
                                                         <subviews>
                                                             <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" restorationIdentifier="paybtn" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUw-MA-uKa">
                                                                 <rect key="frame" x="0.0" y="0.0" width="345" height="41"/>
-                                                                <color key="backgroundColor" red="0.18614032859999999" green="0.42486885190000001" blue="0.3176341057" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="backgroundColor" red="0.023529411764705882" green="0.38823529411764707" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="41" id="opJ-Sn-B26"/>
                                                                 </constraints>
@@ -178,7 +178,7 @@
                                                                                                     </userDefinedRuntimeAttributes>
                                                                                                 </button>
                                                                                             </subviews>
-                                                                                            <color key="backgroundColor" red="0.18614032859999999" green="0.42486885190000001" blue="0.3176341057" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                            <color key="backgroundColor" red="0.027450980392156862" green="0.43137254901960786" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nXL-WI-qOl" secondAttribute="trailing" constant="15" id="82I-AK-zr0"/>
                                                                                                 <constraint firstItem="nXL-WI-qOl" firstAttribute="leading" secondItem="Szr-lA-nOH" secondAttribute="leading" constant="15" id="Iqw-Ag-Y10"/>
