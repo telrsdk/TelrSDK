@@ -48,7 +48,7 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 
-pod 'TelrSDK', "0.1.2"
+pod 'TelrSDK', "0.1.3"
 
 ```
 
@@ -60,6 +60,9 @@ import TelrSDK
 Use this to set the details of store. Make sure you are using your store details
 
 ```ruby
+
+let tabbyKEY:String = "pk_test_d878b6de-9f6f-4c2c-bc8c-fde1b249b9c4"
+
 let KEY:String = " jT4F2^PjBp-n8jbr" // TODO fill key
 let STOREID:String = "24717"  // TODO fill store id
 let EMAIL:String = "test@test.com" // TODO fill email id

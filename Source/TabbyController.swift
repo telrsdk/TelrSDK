@@ -10,25 +10,59 @@ import UIKit
 import WebKit
 public protocol TabbyControllerDelegate {
     
-    func didPaymentCancel()
+    func didTabbyPaymentCancel()
     
-    func didPaymentSuccess(response:CreatedCheckoutSession)
+    func didTabbyPaymentSuccess(response:[String:Any]?)
     
-    func didPaymentFail(messge:String)
+    func didTabbyPaymentFail(messge:String)
 }
-class TabbyController: UIViewController, WKUIDelegate, WKNavigationDelegate, WKScriptMessageHandler,UIScrollViewDelegate {
+public class TabbyController: UIViewController, WKUIDelegate, WKNavigationDelegate, WKScriptMessageHandler,UIScrollViewDelegate {
 
-    var session: [String: Any]?
-    var productType: String?
+    public var session: [String: Any]?
+    public var productType: String?
     
+    public var apiKey: String?
+    
+    public var delegate : TabbyControllerDelegate?
     
     @objc var webView : WKWebView = WKWebView()
     var actInd: UIActivityIndicatorView?
-    
-    override func viewDidLoad() {
+    public var customBackButton : UIButton?
+    public override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.presentationController?.presentedView?.gestureRecognizers?[0].isEnabled = false
+        self.addBackButton()
         self.addWebview()
+    }
+    func addBackButton() {
+        
+        if let customBackButton = self.customBackButton {
+            
+            customBackButton.addTarget(self, action: #selector(self.backAction(_:)), for: .touchUpInside)
+            
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: customBackButton)
+        
+        }else{
+            
+            let backButton = UIButton(type: .custom)
+            
+            backButton.setTitle("Back", for: .normal)
+            
+            backButton.setTitleColor(backButton.tintColor, for: .normal)
+            
+            backButton.addTarget(self, action: #selector(self.backAction(_:)), for: .touchUpInside)
+            
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
+        }
+       
+    }
+    @objc func backAction(_ sender: UIButton) {
+       
+        self.delegate?.didTabbyPaymentCancel()
+    
+        self.dismiss(animated: true, completion: nil)
+    
+        let _ = self.navigationController?.popViewController(animated: true)
     }
     private func addWebview(){
         DispatchQueue.main.async {
@@ -133,7 +167,7 @@ class TabbyController: UIViewController, WKUIDelegate, WKNavigationDelegate, WKS
         let urlString = "https://checkout.tabby.ai/"
         if var urlComponents = URLComponents(string: urlString) {
             let queryItems: [URLQueryItem] = [
-                URLQueryItem(name: "apiKey", value: "pk_test_d878b6de-9f6f-4c2c-bc8c-fde1b249b9c4"),
+                URLQueryItem(name: "apiKey", value: apiKey ?? ""),
                 URLQueryItem(name: "sessionId", value: session!["id"] as? String),
                 URLQueryItem(name: "product", value: productType ?? ""),
             ]
@@ -145,7 +179,7 @@ class TabbyController: UIViewController, WKUIDelegate, WKNavigationDelegate, WKS
     }
 
     // MARK: - WKNavigationDelegate
-    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!)
+    public func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!)
     {
         print(#function)
        
@@ -160,23 +194,32 @@ class TabbyController: UIViewController, WKUIDelegate, WKNavigationDelegate, WKS
 
     }
 
-    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage)
+    public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage)
     {
         print(message.body)
         if let msg = message.body as? String {
             if msg == "close" {
-                self.navigationController?.popViewController(animated: true)
+                   
+                self.dismiss(animated: true, completion: nil)
+                   
+                let _ = self.navigationController?.popViewController(animated: true)
             } else {
                 let session: CreatedCheckoutSession = try! JSONDecoder().decode(CreatedCheckoutSession.self, from: Data(msg.utf8))
                 print("session: \(session)")
                 // Here you get all the updetes from Tabby API
                 // Save order when session.payment.status == "authorized"
                 switch session.payment?.status {
+                
                 case .authorized, .rejected:
+                    let json = try! JSONSerialization.jsonObject(with: Data(msg.utf8), options: .mutableContainers) as? [String: Any]
                     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-                            self.navigationController?.popViewController(animated: true)
+                        self.delegate?.didTabbyPaymentSuccess(response: json)
+                        self.dismiss(animated: true, completion: nil)
+                           
+                        let _ = self.navigationController?.popViewController(animated: true)
                     }
                 default:
+                   
                     break
                 }
             }
@@ -190,6 +233,7 @@ public struct CreatedCheckoutSession: Decodable {
     var id: String?
     var status: String?
     var payment: Payment?
+    var statusMessage : String?
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -210,4 +254,67 @@ public enum PaymentStatus: String, Decodable {
     case rejected = "rejected"
     case closed = "closed"
     case created = "CREATED"
+    
+}
+
+
+
+public class Chekout {
+    
+    public init() {}
+    
+    public func getCheckoutSession(apikey: String,productType:String,body:String,_ completion: @escaping (_ isProductType:Bool,_ session: [String: Any]?) -> ()){
+        
+        var request = URLRequest(url: URL(string: "https://api.tabby.ai/api/v2/checkout")!)
+        request.httpMethod = "post"
+        let key = apikey
+        request.allHTTPHeaderFields = [
+            "Authorization": "Bearer \(key)"]
+        request.httpBody = Data(body.utf8)
+        
+        let task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
+
+               guard error == nil else {
+                   return
+               }
+
+               guard let data = data else {
+                   return
+               }
+
+              do {
+                 if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
+                    //print(json)
+                    let session = json
+                    if let configuration = json["configuration"] as? NSDictionary {
+                        print(configuration)
+                        
+                        if let available_products = configuration["available_products"] as? NSDictionary {
+                                for (key, _) in available_products {
+                                        let type = key as! String
+                                        switch type {
+                                        case productType:
+                                            completion(true,session)
+                                            break
+                                        default:
+                                            continue
+                                }
+                               
+                                
+                            }
+                            
+                        }
+                    }
+         
+                 }
+              } catch let error {
+                completion(false,nil)
+                print(error.localizedDescription)
+              }
+           })
+
+           task.resume()
+        
+    }
+    
 }

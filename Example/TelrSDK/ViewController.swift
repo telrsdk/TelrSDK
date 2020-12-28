@@ -10,6 +10,9 @@ import UIKit
 import TelrSDK
 class ViewController: UIViewController {
     
+    
+    let tabbyKEY:String = "pk_test_d878b6de-9f6f-4c2c-bc8c-fde1b249b9c4"
+    
     let KEY:String = " jT4F2^PjBp-n8jbr" // TODO fill key
     
     let STOREID:String = "24717"  // TODO fill store id
@@ -19,6 +22,10 @@ class ViewController: UIViewController {
     var paymentRequest:PaymentRequest?
     
     @IBOutlet var payBtn: UIButton!
+    @IBOutlet var paylaterButton: UIButton!
+    @IBOutlet var installmentsButton: UIButton!
+   
+    @IBOutlet var tabbyButtonSv: UIStackView!
     @IBOutlet var showCardBtn: UIButton!
     @IBOutlet var cardSv: UIStackView!
     @IBOutlet var amountTxt: UITextField!
@@ -33,13 +40,177 @@ class ViewController: UIViewController {
         if(cardSv.isHidden == true){
             
             cardSv.isHidden = false
-            showCardBtn.setTitle("Hide",for: .normal)
+            showCardBtn.setTitle("Hide telr cards",for: .normal)
             
         }else{
             cardSv.isHidden = true
-            showCardBtn.setTitle("Show stored cards",for: .normal)
+            showCardBtn.setTitle("Show telr stored cards",for: .normal)
             
         }
+    }
+    
+    @IBAction func payWithTabbyBtnPressed(_ sender: Any) {
+        if(tabbyButtonSv.isHidden == true){
+            tabbyButtonSv.isHidden = false
+            
+        }else{
+            tabbyButtonSv.isHidden = true
+           
+            
+        }
+        
+    }
+    func getTabbyBody() -> String {
+        let body = """
+        {
+          "payment": {
+              "amount": 1000,
+              "buyer": {
+                "dob": "1987-10-20",
+                "email": "successful.payment@tabby.ai",
+                "name": "John Doe",
+                "phone": "+971500000001"
+              },
+              "buyer_history": {
+                "loyalty_level": 10,
+                "registered_since": "2019-10-05T17:45:17+00:00",
+                "wishlist_count": 421
+              },
+              "currency": "AED",
+              "description": "Tabby Store Order #3",
+              "order": {
+                "items": [
+                  {
+                    "description": "To be displayed in Tabby order information",
+                    "product_url": "https://tabby.store/p/SKU123",
+                    "quantity": 1,
+                    "reference_id": "SKU123",
+                    "title": "Sample Item #1",
+                    "unit_price": "300"
+                  },
+                  {
+                    "description": "To be displayed in Tabby order information",
+                    "product_url": "https://tabby.store/p/SKU124",
+                    "quantity": 1,
+                    "reference_id": "SKU124",
+                    "title": "Sample Item #2",
+                    "unit_price": "600"
+                  }
+                ],
+                "reference_id": "xxxx-xxxxxx-xxxx",
+                "shipping_amount": "50",
+                "tax_amount": "50"
+              },
+              "order_history": [
+                {
+                  "amount": "\(self.amountTxt.text ?? "0")",
+                  "buyer": {
+                    "name": "\(self.firstNameTxt.text ?? "") \(self.lastNameTxt.text ?? "")",
+                    "phone": "+971-505-5566-33"
+                  },
+                  "items": [
+                    {
+                      "quantity": 4,
+                      "title": "Sample Item #3",
+                      "unit_price": "250",
+                      "reference_id": "item-sku",
+                      "ordered": 4,
+                      "captured": 4,
+                      "shipped": 4,
+                      "refunded": 1
+                    }
+                  ],
+                  "payment_method": "CoD",
+                  "purchased_at": "2019-10-05T18:45:17+00:00",
+                  "shipping_address": {
+                    "address": "Sample Address #1",
+                    "city": "Dubai"
+                  },
+                  "status": "complete"
+                }
+              ],
+              "shipping_address": {
+                "address": "Sample Address #2",
+                "city": "Dubai"
+              }
+          }
+        }
+        """
+        return body
+    }
+    @IBAction func paylaterButtonAction() {
+        
+        if((self.amountTxt.text ?? "").isEmpty){
+            self.showAlert(message: "Enter amount", type: "Error")
+        }else if((self.firstNameTxt.text ?? "").isEmpty){
+            self.showAlert(message: "Enter first name", type: "Error")
+        }else if((self.lastNameTxt.text ?? "").isEmpty){
+            self.showAlert(message: "Enter last name", type: "Error")
+        }else {
+            Chekout().getCheckoutSession(apikey: tabbyKEY,productType:"pay_later", body: getTabbyBody()) { (isProductType, session) in
+                DispatchQueue.main.async {
+                    if(isProductType) {
+                        
+                        if(session != nil ){
+                            
+                            let customBackButton = UIButton(type: .custom)
+                            customBackButton.setTitle("Back", for: .normal)
+                            customBackButton.setTitleColor(.black, for: .normal)
+                            let tabbyController = TabbyController()
+                            tabbyController.productType = "pay_later"
+                            tabbyController.session = session
+                            tabbyController.delegate = self
+                            tabbyController.apiKey = self.tabbyKEY
+                            tabbyController.customBackButton = customBackButton
+                            self.navigationController?.pushViewController(tabbyController, animated: true)
+                            
+                            }
+                        
+                        
+                    }
+                }
+                
+            }
+        }
+        
+
+    }
+    
+    @IBAction func installmentsButtonAction() {
+        
+        if((self.amountTxt.text ?? "").isEmpty){
+            self.showAlert(message: "Enter amount", type: "Error")
+        }else if((self.firstNameTxt.text ?? "").isEmpty){
+            self.showAlert(message: "Enter first name", type: "Error")
+        }else if((self.lastNameTxt.text ?? "").isEmpty){
+            self.showAlert(message: "Enter last name", type: "Error")
+        }else {
+            Chekout().getCheckoutSession(apikey: tabbyKEY,productType:"installments", body: getTabbyBody()) { (isProductType, session) in
+                DispatchQueue.main.async {
+                    if(isProductType) {
+                        
+                        if(session != nil ){
+                            
+                                let tabbyController = TabbyController()
+                                tabbyController.productType = "installments"
+                                tabbyController.session = session
+                                tabbyController.delegate = self
+                                tabbyController.apiKey = self.tabbyKEY
+                                //self.navigationController?.pushViewController(tabbyController, animated: true)
+                                let nav = UINavigationController(rootViewController: tabbyController)
+                                self.navigationController?.present(nav, animated: true, completion: nil)
+                            }
+                        
+                        
+                    }
+                }
+        }
+        
+       
+            
+        }
+        
+        
     }
     @IBAction func payBtnPressed(_ sender: Any) {
         
@@ -78,8 +249,14 @@ class ViewController: UIViewController {
         self.navigationItem.titleView = logoContainer
         self.setupToHideKeyboardOnTapOnView()
         self.displaySavedCard()
-    
+        
+        paylaterButton.setTitleColor(.black, for: .normal)
+        paylaterButton.backgroundColor = UIColor(red:0.24, green:0.93, blue:0.75, alpha:1.0)
+        installmentsButton.setTitleColor(.black, for: .normal)
+        installmentsButton.backgroundColor = UIColor(red:0.24, green:0.93, blue:0.75, alpha:1.0)
+       
     }
+    
     private func displaySavedCard() {
         let savedCard = TelrResponseModel().getSavedCards()
         self.cardDetailsArray = savedCard
@@ -87,13 +264,13 @@ class ViewController: UIViewController {
              
             showCardBtn.isHidden = true
             cardSv.isHidden = true
-            showCardBtn.setTitle("Show stored cards",for: .normal)
+            showCardBtn.setTitle("Show telr stored cards",for: .normal)
             
          }else{
             
             showCardBtn.isHidden = false
             cardSv.isHidden = false
-            showCardBtn.setTitle("Hide",for: .normal)
+            showCardBtn.setTitle("Hide telr cards",for: .normal)
             
         }
         self.collectionView.delegate = self
@@ -362,4 +539,32 @@ extension UIViewController
     {
         view.endEditing(true)
     }
+}
+
+
+
+
+extension ViewController:TabbyControllerDelegate{
+   
+    //Mark:- This method call when user click on back button
+    func didTabbyPaymentCancel() {
+        print("didPaymentCancel")
+        self.showAlert(message: "didPaymentCancel", type: "Cancel")
+    }
+    
+    //Mark:- This method call when payment done successfully
+    func didTabbyPaymentSuccess(response: [String : Any]?) {
+        
+        print("didPaymentSuccess\(response!)")
+       
+        self.showAlert(message: "didPaymentSuccess", type: "Success")
+      
+    }
+    
+    //Mark:- This method call when user click on cancel button and if payment get failed
+    func didTabbyPaymentFail(messge: String) {
+        print("didPaymentFail")
+        self.showAlert(message: "didPaymentFail \(messge)", type: "Fail")
+    }
+        
 }

@@ -78,34 +78,98 @@
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" restorationIdentifier="show_btn_sv" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DUr-cP-H3a">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DUr-cP-H3a">
                                                         <rect key="frame" x="0.0" y="217" width="345" height="90"/>
                                                         <subviews>
-                                                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" restorationIdentifier="paybtn" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUw-MA-uKa">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="z4B-k1-Bu9">
                                                                 <rect key="frame" x="0.0" y="0.0" width="345" height="41"/>
-                                                                <color key="backgroundColor" red="0.023529411764705882" green="0.38823529411764707" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="41" id="opJ-Sn-B26"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <state key="normal" title="Pay"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                        <integer key="value" value="6"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="payBtnPressed:" destination="CS5-Xa-Jcn" eventType="touchUpInside" id="NKS-dY-7j9"/>
-                                                                </connections>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="showcardbtn" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qau-Rc-wmO">
+                                                                <subviews>
+                                                                    <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUw-MA-uKa">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="168.5" height="41"/>
+                                                                        <color key="backgroundColor" red="0.023529411764705882" green="0.38823529411764707" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="41" id="opJ-Sn-B26"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <state key="normal" title="Pay with telr"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <integer key="value" value="6"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="payBtnPressed:" destination="CS5-Xa-Jcn" eventType="touchUpInside" id="NKS-dY-7j9"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTA-dD-xev">
+                                                                        <rect key="frame" x="176.5" y="0.0" width="168.5" height="41"/>
+                                                                        <color key="backgroundColor" red="0.023529411760000001" green="0.38823529410000002" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="41" id="Zuu-V1-NX4"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <state key="normal" title="Pay with tabby"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <integer key="value" value="6"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="payWithTabbyBtnPressed:" destination="CS5-Xa-Jcn" eventType="touchUpInside" id="Quq-eb-HAU"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hxd-Rf-G8O">
+                                                                <rect key="frame" x="0.0" y="45" width="345" height="41"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rC-lX-xIn">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="168.5" height="41"/>
+                                                                        <color key="backgroundColor" red="0.18614032859999999" green="0.42486885190000001" blue="0.3176341057" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="41" id="zvA-FB-cw4"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <state key="normal" title="PAY LATER WITH TABBY"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <integer key="value" value="6"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="paylaterButtonAction" destination="CS5-Xa-Jcn" eventType="touchUpInside" id="xQ1-eP-snZ"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7m-2D-E9B">
+                                                                        <rect key="frame" x="176.5" y="0.0" width="168.5" height="41"/>
+                                                                        <color key="backgroundColor" red="0.023529411760000001" green="0.38823529410000002" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="41" id="pxQ-wS-y77"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <state key="normal" title="PAY IN ISTALLMENTS"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <integer key="value" value="6"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="installmentsButtonAction" destination="CS5-Xa-Jcn" eventType="touchUpInside" id="cWa-xZ-AX8"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qau-Rc-wmO">
                                                                 <rect key="frame" x="0.0" y="49" width="345" height="41"/>
                                                                 <color key="backgroundColor" red="0.18614032859999999" green="0.42486885190000001" blue="0.3176341057" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="41" id="JyC-5A-zqO"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Show stored cards"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -118,11 +182,8 @@
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="90" id="lUZ-Qr-ESG"/>
-                                                        </constraints>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" restorationIdentifier="card_sv" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4zO-6R-SYx">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4zO-6R-SYx">
                                                         <rect key="frame" x="0.0" y="327" width="345" height="170"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2uK-yw-2fM">
@@ -261,9 +322,12 @@
                         <outlet property="cardSv" destination="4zO-6R-SYx" id="r0X-bX-tyP"/>
                         <outlet property="collectionView" destination="80f-A6-aQG" id="m9y-N9-BVf"/>
                         <outlet property="firstNameTxt" destination="pm5-RR-HAi" id="jjP-dV-AvI"/>
+                        <outlet property="installmentsButton" destination="S7m-2D-E9B" id="CT0-fF-Esx"/>
                         <outlet property="lastNameTxt" destination="eUb-4j-haN" id="pdQ-ZD-JPD"/>
                         <outlet property="payBtn" destination="gUw-MA-uKa" id="Ewo-tq-mz6"/>
+                        <outlet property="paylaterButton" destination="9rC-lX-xIn" id="Emb-ci-pSh"/>
                         <outlet property="showCardBtn" destination="qau-Rc-wmO" id="6Ka-go-OZw"/>
+                        <outlet property="tabbyButtonSv" destination="hxd-Rf-G8O" id="VRz-wo-47f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W33-LV-5DC" sceneMemberID="firstResponder"/>

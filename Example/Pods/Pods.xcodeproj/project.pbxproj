@@ -12,7 +12,6 @@
 		512EAB62DB55F94208946D8B6BF23C09 /* Pods-TelrSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45C054C7E0AA8CC9A369E2EBFE90032F /* Pods-TelrSDK_Tests-dummy.m */; };
 		51BEAD9C5A475DFCEAEDC17195905688 /* XML.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A0BDD2F76BCBD9AA90CB071DC1CF0 /* XML.swift */; };
 		5EDCF4DE8A2A385EECCD5AA21B467E99 /* Pods-TelrSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D32ECABC94D667BFFE101BCAF77E73 /* Pods-TelrSDK_Example-dummy.m */; };
-		847CABD225925BB000C19388 /* TabbySelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CABD125925BB000C19388 /* TabbySelectionVC.swift */; };
 		85843F1E38D612190743446EA3D49D63 /* TelrSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A701F0971869282DB82BB535CFB195C /* TelrSDK-dummy.m */; };
 		8B23028FAA5BFD644736EF9C03D9D5E7 /* TelrSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E597F7679452BD89861B69DFDF783B11 /* TelrSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B845EAAE013864B5C95527E1BFC636E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
@@ -62,7 +61,6 @@
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		75E10F3CCC9BC543021993382EC532B6 /* TabbyController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TabbyController.swift; path = Source/TabbyController.swift; sourceTree = "<group>"; };
 		7D7AAC4981950876F8DCE8AE9202B16F /* TelrResponseModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TelrResponseModel.swift; path = Source/TelrResponseModel.swift; sourceTree = "<group>"; };
-		847CABD125925BB000C19388 /* TabbySelectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabbySelectionVC.swift; path = Source/TabbySelectionVC.swift; sourceTree = "<group>"; };
 		87384F75D2DAD91FEADD1CBD6601A884 /* Pods-TelrSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TelrSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8FAEDCA37DB5EF9CF91E7CAA0DE7EF90 /* Pods-TelrSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TelrSDK_Example-umbrella.h"; sourceTree = "<group>"; };
 		93DBAABCB44544FFCBB091740F8B7AA4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 		C597353C821249BB5897B15A33637FC0 /* TelrSDK */ = {
 			isa = PBXGroup;
 			children = (
-				847CABD125925BB000C19388 /* TabbySelectionVC.swift */,
 				96456E2034345165F0BE1B2B09908548 /* PaymentRequest.swift */,
 				75E10F3CCC9BC543021993382EC532B6 /* TabbyController.swift */,
 				5016CFD186D6139051E5CA83189856F9 /* TelrController.swift */,
@@ -331,7 +328,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1200;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -388,7 +385,6 @@
 				97163576326A2F1AEDCD5EF53748058F /* TelrResponseModel.swift in Sources */,
 				85843F1E38D612190743446EA3D49D63 /* TelrSDK-dummy.m in Sources */,
 				51BEAD9C5A475DFCEAEDC17195905688 /* XML.swift in Sources */,
-				847CABD225925BB000C19388 /* TabbySelectionVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,7 +475,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -507,7 +503,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-TelrSDK_Example/Pods-TelrSDK_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TelrSDK_Example/Pods-TelrSDK_Example.modulemap";
@@ -540,7 +536,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-TelrSDK_Tests/Pods-TelrSDK_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TelrSDK_Tests/Pods-TelrSDK_Tests.modulemap";
@@ -573,7 +569,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/TelrSDK/TelrSDK-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/TelrSDK/TelrSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/TelrSDK/TelrSDK.modulemap";
 				PRODUCT_MODULE_NAME = TelrSDK;
@@ -638,7 +634,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -664,7 +660,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-TelrSDK_Example/Pods-TelrSDK_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TelrSDK_Example/Pods-TelrSDK_Example.modulemap";
@@ -696,7 +692,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-TelrSDK_Tests/Pods-TelrSDK_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TelrSDK_Tests/Pods-TelrSDK_Tests.modulemap";
@@ -728,7 +724,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/TelrSDK/TelrSDK-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/TelrSDK/TelrSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/TelrSDK/TelrSDK.modulemap";
 				PRODUCT_MODULE_NAME = TelrSDK;
