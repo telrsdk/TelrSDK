@@ -41,6 +41,10 @@ public class TelrController: UIViewController, XMLParserDelegate {
     
     private var _cardLast4:String?
     
+    private var _month:String?
+    
+    private var _year:String?
+    
     private var _cvv:String?
     
     private var _transRef:String?
@@ -116,12 +120,13 @@ public class TelrController: UIViewController, XMLParserDelegate {
 
             
         let configuration = WKWebViewConfiguration()
-            
+
         let viewBack = UIView()
         
+        self.view.backgroundColor = .white
         viewBack.backgroundColor = .white
         
-        viewBack.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        viewBack.frame = CGRect(x: 0, y: 40, width: self.view.frame.width, height: self.view.frame.height-60)
         
         webView = WKWebView(frame: CGRect.zero, configuration: configuration)
             
@@ -157,8 +162,12 @@ public class TelrController: UIViewController, XMLParserDelegate {
         
         webView.translatesAutoresizingMaskIntoConstraints = false
         
+        webView.scrollView.minimumZoomScale = 1.0;
+        webView.scrollView.maximumZoomScale = 1.0;
+       
         viewBack.addSubview(webView)
         
+       
         self.view.addSubview(viewBack)
         
         self.showActivityIndicatory(uiView: self.webView)
@@ -219,7 +228,6 @@ public class TelrController: UIViewController, XMLParserDelegate {
 
                         let xmlresponse = XML.parse(data)
 
-                        
                         if let message = xmlresponse["mobile","auth","message"].text{
                             
                            
@@ -239,7 +247,11 @@ public class TelrController: UIViewController, XMLParserDelegate {
                                 self._cardCode = xmlresponse["mobile","auth","cardcode"].text
 
                                 self._cardLast4 = xmlresponse["mobile","auth","cardlast4"].text
+                                
+                                self._month = xmlresponse["mobile","auth","card","expiry","month"].text
 
+                                self._year = xmlresponse["mobile","auth","card","expiry","year"].text
+                                
                                 self._cvv = xmlresponse["mobile","auth","cvv"].text!
 
                                 self._transRef = xmlresponse["mobile","auth","tranref"].text
@@ -262,6 +274,10 @@ public class TelrController: UIViewController, XMLParserDelegate {
                                 telrResponseModel.cardCode = self._cardCode
                                              
                                 telrResponseModel.cardLast4 = self._cardLast4
+                                
+                                telrResponseModel.month = self._month
+                                
+                                telrResponseModel.year = self._year
                                             
                                 telrResponseModel.cvv = self._cvv
                                              
@@ -415,6 +431,10 @@ public class TelrController: UIViewController, XMLParserDelegate {
                
                 if let data = data{
 
+                    let str = String(data: data, encoding: .utf8)!
+                    print(str)
+                    
+                    
                     let xmlresponse = XML.parse(data)
 
                     let statusMessage = xmlresponse["mobile","auth","message"]
@@ -430,6 +450,10 @@ public class TelrController: UIViewController, XMLParserDelegate {
                     self._cardCode = xmlresponse["mobile","auth","cardcode"].text
 
                     self._cardLast4 = xmlresponse["mobile","auth","cardlast4"].text
+                    
+                    self._month = xmlresponse["mobile","auth","card","expiry","month"].text
+
+                    self._year = xmlresponse["mobile","auth","card","expiry","year"].text
 
                     self._cvv = xmlresponse["mobile","auth","cvv"].text!
 
@@ -600,6 +624,10 @@ extension TelrController : WKNavigationDelegate, WKUIDelegate, UIScrollViewDeleg
                         telrResponseModel.cardCode = self._cardCode
                                      
                         telrResponseModel.cardLast4 = self._cardLast4
+                        
+                        telrResponseModel.month = self._month
+                        
+                        telrResponseModel.year = self._year
                                     
                         telrResponseModel.cvv = self._cvv
                                      
@@ -723,3 +751,44 @@ extension TelrController : WKNavigationDelegate, WKUIDelegate, UIScrollViewDeleg
  }
    
 
+extension UIView {
+
+    ///Constraints a view to its superview
+    func constraintToSuperView() {
+        guard let superview = superview else { return }
+        translatesAutoresizingMaskIntoConstraints = false
+
+        topAnchor.constraint(equalTo: superview.topAnchor).isActive = true
+        leftAnchor.constraint(equalTo: superview.leftAnchor).isActive = true
+        bottomAnchor.constraint(equalTo: superview.bottomAnchor).isActive = true
+        rightAnchor.constraint(equalTo: superview.rightAnchor).isActive = true
+    }
+
+    ///Constraints a view to its superview safe area
+    func constraintToSafeArea() {
+        guard let superview = superview else { return }
+        translatesAutoresizingMaskIntoConstraints = false
+
+        if #available(iOS 11.0, *) {
+            topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor).isActive = true
+        } else {
+            // Fallback on earlier versions
+        }
+        if #available(iOS 11.0, *) {
+            leftAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.leftAnchor).isActive = true
+        } else {
+            // Fallback on earlier versions
+        }
+        if #available(iOS 11.0, *) {
+            bottomAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        } else {
+            // Fallback on earlier versions
+        }
+        if #available(iOS 11.0, *) {
+            rightAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.rightAnchor).isActive = true
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+
+}

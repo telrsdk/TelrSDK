@@ -48,7 +48,7 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 
-pod 'TelrSDK', "0.1.4"
+pod 'TelrSDK', "0.1.5"
 
 ```
 
@@ -128,6 +128,10 @@ extension ViewController:TelrControllerDelegate{
         
         print("didPaymentSuccess")
            
+        print("month \(String(describing: response.month))")
+           
+        print("year \(String(describing: response.year))")
+              
         print("Trace \(String(describing: response.trace))")
         
         print("Status \(String(describing: response.status))")

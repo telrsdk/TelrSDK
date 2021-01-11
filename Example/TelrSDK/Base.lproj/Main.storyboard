@@ -215,6 +215,12 @@
                                                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                     <nil key="highlightedColor"/>
                                                                                                 </label>
+                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azw-8H-DB9">
+                                                                                                    <rect key="frame" x="254.5" y="16" width="39.5" height="19.5"/>
+                                                                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                    <nil key="highlightedColor"/>
+                                                                                                </label>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXL-WI-qOl">
                                                                                                     <rect key="frame" x="15" y="51.5" width="45" height="21.5"/>
                                                                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
@@ -244,12 +250,14 @@
                                                                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nXL-WI-qOl" secondAttribute="trailing" constant="15" id="82I-AK-zr0"/>
                                                                                                 <constraint firstItem="nXL-WI-qOl" firstAttribute="leading" secondItem="Szr-lA-nOH" secondAttribute="leading" constant="15" id="Iqw-Ag-Y10"/>
                                                                                                 <constraint firstItem="nXL-WI-qOl" firstAttribute="top" secondItem="iq7-FU-BSY" secondAttribute="bottom" constant="15" id="KyQ-ng-m1L"/>
+                                                                                                <constraint firstItem="Azw-8H-DB9" firstAttribute="top" secondItem="Szr-lA-nOH" secondAttribute="top" constant="16" id="P07-Q8-tvb"/>
                                                                                                 <constraint firstItem="iq7-FU-BSY" firstAttribute="height" secondItem="nXL-WI-qOl" secondAttribute="height" id="P9a-jJ-gbk"/>
                                                                                                 <constraint firstItem="eqY-XX-BlX" firstAttribute="centerX" secondItem="Szr-lA-nOH" secondAttribute="centerX" id="R7w-Uh-HMf"/>
                                                                                                 <constraint firstItem="eqY-XX-BlX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nXL-WI-qOl" secondAttribute="bottom" constant="15" id="TlS-dm-S1s"/>
                                                                                                 <constraint firstItem="iq7-FU-BSY" firstAttribute="top" secondItem="Szr-lA-nOH" secondAttribute="top" constant="15" id="Xpe-1e-Kar"/>
                                                                                                 <constraint firstItem="iq7-FU-BSY" firstAttribute="leading" secondItem="Szr-lA-nOH" secondAttribute="leading" constant="15" id="fFK-Xq-luw"/>
                                                                                                 <constraint firstAttribute="bottom" secondItem="eqY-XX-BlX" secondAttribute="bottom" constant="15" id="hGu-aF-xq1"/>
+                                                                                                <constraint firstAttribute="trailing" secondItem="Azw-8H-DB9" secondAttribute="trailing" constant="16" id="mkn-d9-0HU"/>
                                                                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iq7-FU-BSY" secondAttribute="trailing" id="pal-8N-UM8"/>
                                                                                             </constraints>
                                                                                             <userDefinedRuntimeAttributes>
@@ -272,6 +280,7 @@
                                                                                     <outlet property="cardNumberLbl" destination="nXL-WI-qOl" id="SBR-fS-C8i"/>
                                                                                     <outlet property="holderNameLbl" destination="iq7-FU-BSY" id="1lN-j9-YYK"/>
                                                                                     <outlet property="payBtn" destination="eqY-XX-BlX" id="ghl-jv-qWq"/>
+                                                                                    <outlet property="validtrrought" destination="Azw-8H-DB9" id="IX3-SC-Ibu"/>
                                                                                 </connections>
                                                                             </collectionViewCell>
                                                                         </cells>

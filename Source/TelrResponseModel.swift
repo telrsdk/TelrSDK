@@ -31,6 +31,10 @@ public class TelrResponseModel : Encodable & Decodable{
           
     @objc public var cardLast4:String?   // The last 4 digits of the card number used in the transaction. This is supplied for all payment types (including the Hosted Payment Page method) except for PayPal.
           
+    @objc public var month:String?
+    
+    @objc public var year:String?
+    
     @objc public var cvv:String?         /* Result of the CVV check:
            Y = CVV matched OK
            N = CVV not matched

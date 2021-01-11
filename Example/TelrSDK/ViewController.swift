@@ -308,6 +308,11 @@ extension ViewController:TelrControllerDelegate{
         
         print("didPaymentSuccess")
            
+        print("month \(String(describing: response.month))")
+        
+        print("year \(String(describing: response.year))")
+        
+        print("Trace \(String(describing: response.trace))")
         print("Trace \(String(describing: response.trace))")
         
         print("Status \(String(describing: response.status))")
@@ -351,7 +356,7 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDataSource,U
         let model = self.cardDetailsArray[indexPath.item]
         
         cell.holderNameLbl.text = "\(model.billingFName ?? "") \(model.billingLName ?? "")"
-        
+        cell.validtrrought.text = "Valid : \(model.month ?? "")/\(model.year ?? "")"
         cell.cardNumberLbl.text = " **** **** **** \(model.cardLast4 ?? "")"
         cell.payBtn.tag = indexPath.item
         cell.payBtn.addTarget(self, action: #selector(payBtnPressed), for: .touchUpInside)
@@ -512,6 +517,9 @@ extension ViewController{
 class Cell: UICollectionViewCell {
     
     @IBOutlet weak var backView: UIView!
+    
+    
+    @IBOutlet weak var validtrrought: UILabel!
     
     @IBOutlet weak var holderNameLbl: UILabel!
     
