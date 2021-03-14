@@ -13,9 +13,10 @@ class ViewController: UIViewController {
     
     let tabbyKEY:String = "pk_test_d878b6de-9f6f-4c2c-bc8c-fde1b249b9c4"
     
-    let KEY:String = " jT4F2^PjBp-n8jbr" // TODO fill key
+    let KEY:String = "pQ6nP-7rHt@5WRFv"//"jT4F2^PjBp-n8jbr" // TODO fill key
     
-    let STOREID:String = "24717"  // TODO fill store id
+    let STOREID:String = "15996"//"24717"  // TODO fill store id
+    
     
     let EMAIL:String = "test@test.com" // TODO fill email id
     
@@ -334,7 +335,7 @@ extension ViewController:TelrControllerDelegate{
         //For save the card you need to store tranRef and when you are going to make second trans using thistranRef
         self.displaySavedCard()
         
-        self.showAlert(message: "didPaymentSuccess", type: "Success")
+        self.showAlert(message: "didPaymentSuccess\n month \(String(describing: response.month))\nyear \(String(describing: response.year))\nTrace \(String(describing: response.trace))\nStatus \(String(describing: response.status))\nAvs \(String(describing: response.avs))\nCode \(String(describing: response.code))\nCa_valid \(String(describing: response.ca_valid))\nCard Code \(String(describing: response.cardCode))\nCard Last4 \(String(describing: response.cardLast4))\nCard Last4 \(String(describing: response.cardLast4))\nCVV \(String(describing: response.cvv))\nTransRef \(String(describing: response.transRef))", type: "Success")
       
     }
     
@@ -403,7 +404,7 @@ extension ViewController{
      
          paymentReq.appVersion = "0.0.1"
      
-         paymentReq.transTest = "1"//0
+         paymentReq.transTest = "0"//1"//0
     
          paymentReq.transType = "paypage"
     
