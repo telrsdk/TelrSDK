@@ -48,7 +48,7 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 
-pod 'TelrSDK', "0.1.5"
+pod 'TelrSDK', "0.1.6"
 
 ```
 
