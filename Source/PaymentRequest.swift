@@ -58,6 +58,8 @@ open class PaymentRequest:NSObject{
     
     public var address = String()
     
+    public var zip = String()
+    
     public var language = String()
     
     public var transRef = String()

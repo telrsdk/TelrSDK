@@ -532,6 +532,7 @@ public class TelrController: UIViewController, XMLParserDelegate {
                     <country>\(paymentRequest.country)</country>
                     <region>\(paymentRequest.region)</region>
                     <line1>\(paymentRequest.address)</line1>
+                    <zip>\(paymentRequest.zip)</zip>
                 </address>
             </billing>
         </mobile>
@@ -681,6 +682,9 @@ extension TelrController : WKNavigationDelegate, WKUIDelegate, UIScrollViewDeleg
                         telrResponseModel.region = self.paymentRequest.region
                         
                         telrResponseModel.address = self.paymentRequest.address
+                        
+                        telrResponseModel.zip = self.paymentRequest.zip
+                        
                         
                         telrResponseModel.language = self.paymentRequest.language
                         

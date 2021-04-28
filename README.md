@@ -48,7 +48,7 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 
-pod 'TelrSDK', "0.1.6"
+pod 'TelrSDK', "0.1.7"
 
 ```
 
@@ -258,6 +258,8 @@ extension ViewController{
         paymentReq.region = "Dubai"
     
         paymentReq.address = "line 1"
+        
+        paymentReq.zip = "414202"
     
         paymentReq.language = "en"
     
@@ -322,6 +324,8 @@ extension ViewController{
         paymentReq.region = lastresponse.region ?? ""
      
         paymentReq.address = lastresponse.address ?? ""
+        
+        paymentReq.zip = lastresponse.zip ?? ""
      
         paymentReq.transAmount = amountTxt.text!
             

@@ -88,6 +88,8 @@ public class TelrResponseModel : Encodable & Decodable{
     @objc public var region : String?
         
     @objc public var address : String?
+    
+    @objc public var zip : String?
         
     @objc public var language : String?
         

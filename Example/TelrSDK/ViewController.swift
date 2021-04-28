@@ -13,12 +13,16 @@ class ViewController: UIViewController {
     
     let tabbyKEY:String = "pk_test_d878b6de-9f6f-4c2c-bc8c-fde1b249b9c4"
     
-    let KEY:String = "pQ6nP-7rHt@5WRFv"//"jT4F2^PjBp-n8jbr" // TODO fill key
-    
-    let STOREID:String = "15996"//"24717"  // TODO fill store id
-    
-    
+    let KEY:String = " jT4F2^PjBp-n8jbr" // TODO fill key
+    let STOREID:String = "24717"  // TODO fill store id
     let EMAIL:String = "test@test.com" // TODO fill email id
+    
+//    let KEY:String = "pQ6nP-7rHt@5WRFv"//"jT4F2^PjBp-n8jbr" // TODO fill key
+//    let STOREID:String = "15996"//"24717"  // TODO fill store id
+//    let KEY:String = " jT4F2^PjBp-n8jbr" // TODO fill key
+//    let STOREID:String = "24717"  // TODO fill store id
+//    let EMAIL:String = "test@test.com" // TODO fill email id
+//    let EMAIL:String = "test@test.com" // TODO fill email id
     
     var paymentRequest:PaymentRequest?
     
@@ -404,7 +408,7 @@ extension ViewController{
      
          paymentReq.appVersion = "0.0.1"
      
-         paymentReq.transTest = "0"//1"//0
+         paymentReq.transTest = "1"//1"//0
     
          paymentReq.transType = "paypage"
     
@@ -416,7 +420,7 @@ extension ViewController{
      
          paymentReq.transCurrency = "AED"
      
-         paymentReq.transAmount = amountTxt.text!
+        paymentReq.transAmount = self.amountTxt.text!
      
          paymentReq.billingEmail = EMAIL
         
@@ -435,6 +439,8 @@ extension ViewController{
          paymentReq.region = "Dubai"
      
          paymentReq.address = "line 1"
+        
+         paymentReq.zip = "414202"
      
          paymentReq.language = "en"
      
@@ -500,6 +506,9 @@ extension ViewController{
         paymentReq.region = lastresponse.region ?? ""
      
         paymentReq.address = lastresponse.address ?? ""
+        
+        paymentReq.zip = lastresponse.zip ?? ""
+        
      
         paymentReq.transAmount = amountTxt.text!
             
