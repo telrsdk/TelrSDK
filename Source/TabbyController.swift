@@ -77,8 +77,6 @@ public class TabbyController: UIViewController, WKUIDelegate, WKNavigationDelega
     @objc func createWebView() {
 
             
-        
-            
         let viewBack = UIView()
         
         viewBack.backgroundColor = .white
